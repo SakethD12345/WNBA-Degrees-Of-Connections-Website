@@ -1,0 +1,48 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: orangered;
+}
+.header {
+  background-color: orange;
+  text-align: center;
+  font-size: 40px;
+  border-style: groove;
+  border-color: black;
+  border-width: 4px;
+  border-top-style: hidden;
+  border-right-style: hidden;
+  border-left-style: hidden;
+  padding: 12px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+}
+
+@keyframes bounce {
+  0% {
+    transform: translatey(-250px);
+  }
+  25% {
+    transform: translateY(65px);
+  }
+  50% {
+    transform: translateY(-100px);
+  }
+  75% {
+    transform: translateY(65px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.basketball-img {
+  position: relative;
+  width: 80px;
+  margin: 40px;
+  animation: bounce 4s ease-in-out;
+}
