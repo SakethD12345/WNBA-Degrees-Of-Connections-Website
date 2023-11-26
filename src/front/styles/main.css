@@ -1,23 +1,29 @@
 body {
   margin: 0;
   padding: 0;
-  background-color: orangered;
+  background-color: white;
+  display: grid;
+  font-family: Optima, sans-serif;
+}
+
+a {
+  text-decoration: none;
 }
 .header {
-  background-color: orange;
+  background-image: url("https://d3cin4duo2vkym.cloudfront.net/images/2019/6/14/MPKFIBKOSSCHTGR.20190614183503.jpg");
+  background-position: center -60px;
+  background-blend-mode: color;
   text-align: center;
   font-size: 40px;
-  border-style: groove;
+
+  color: whitesmoke;
   border-color: black;
   border-width: 4px;
   border-top-style: hidden;
   border-right-style: hidden;
   border-left-style: hidden;
-  padding: 12px;
-  border-bottom-left-radius: 10px;
-  border-bottom-right-radius: 10px;
+  padding: 15px;
   display: flex;
-
   align-items: center;
   justify-content: center;
 }
@@ -44,5 +50,91 @@ body {
   position: relative;
   width: 80px;
   margin: 40px;
-  animation: bounce 4s ease-in-out;
+  animation: bounce 3.5s ease-in-out;
+}
+
+@keyframes bounce2 {
+  0% {
+    transform: translatey(-250px);
+  }
+  25% {
+    transform: translateY(-250px);
+  }
+  50% {
+    transform: translateY(-250px);
+  }
+  62.5% {
+    transform: translateY(70px);
+  }
+  75% {
+    transform: translateY(-100px);
+  }
+  87.5% {
+    transform: translateY(70px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+#title {
+  position: relative;
+  animation: bounce2 6s ease-in-out;
+}
+
+.bar {
+  width: 100%;
+  background-color: lightgray;
+  display: flex;
+  align-items: center;
+  font-size: xx-large;
+  padding: 0;
+  justify-content: space-between;
+}
+#wnba-logo {
+  width: 150px;
+  margin: 0%;
+}
+#wnba-logo-text {
+  color: orangered;
+  margin-left: -50px;
+}
+#corner-logo {
+  display: flex;
+  align-items: center;
+}
+
+#bar-buttons {
+  margin-right: 20px;
+}
+
+#calc-button {
+  margin: 30px;
+  color: white;
+  background-color: orangered;
+  font-family: Optima, sans-serif;
+  border-radius: 10px;
+  width: 100px;
+  height: 40px;
+  border: 0;
+}
+
+#abt-button {
+  margin: 30px;
+  color: orangered;
+  background-color: white;
+  font-family: Optima, sans-serif;
+  border-radius: 10px;
+  width: 100px;
+  height: 40px;
+  border: 0;
+}
+
+#calc-button:hover {
+  cursor: pointer;
+}
+#abt-button:hover {
+  background-color: orangered;
+  color: white;
+  cursor: pointer;
 }
