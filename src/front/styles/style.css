@@ -84,12 +84,13 @@ a {
 
 .bar {
   width: 100%;
-  background-color: lightgray;
+  background-color: white;
   display: flex;
   align-items: center;
   font-size: xx-large;
   padding: 0;
   justify-content: space-between;
+  position: fixed;
 }
 #wnba-logo {
   width: 150px;
@@ -129,6 +130,16 @@ a {
   height: 40px;
   border: 0;
 }
+#history-button {
+  margin: 30px;
+  color: orangered;
+  background-color: white;
+  font-family: Optima, sans-serif;
+  border-radius: 10px;
+  width: 100px;
+  height: 40px;
+  border: 0;
+}
 
 #calc-button:hover {
   cursor: pointer;
@@ -137,4 +148,43 @@ a {
   background-color: orangered;
   color: white;
   cursor: pointer;
+}
+#history-button:hover {
+  background-color: orangered;
+  color: white;
+  cursor: pointer;
+}
+
+#root {
+  margin-top: 110px;
+  width: 100%;
+}
+
+#app {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: bottom;
+  background-color: white;
+  height: 89.4vh;
+}
+
+#history {
+  display: flex;
+  flex-direction: column;
+  width: 20%;
+  background-color: lightgray;
+  height: 89.4vh;
+  border-radius: 50px;
+  overflow: hidden;
+  align-items: center;
+  color: orangered;
+}
+
+#input-output {
+  display: flex;
+  align-items: center;
+  background-color: white;
+  height: 89.4vh;
+  width: 80%;
 }
