@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="3257499a-8d38-4a68-9a4f-35171d887705" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../../.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../moshi (1).iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../moshi.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/csv/CSVParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/csv/CSVParser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/playwright-report/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/playwright-report/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/styles/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/styles/main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/tests/App.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/tests/App.spec.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../target/classes/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../target/classes/.idea/checkstyle-idea.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../target/classes/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../target/classes/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../target/classes/.idea/shelf/Uncommitted_changes_before_Update_at_10_23_23,_8_29_PM_[Changes]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../target/classes/.idea/shelf/Uncommitted_changes_before_Update_at_10_23_23__8_29_PM__Changes_.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../target/classes/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../target/classes/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../target/classes/moshi.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../target/classes/repl/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../target/classes/repl/backend/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../target/classes/repl/backend/csv/CSVParser.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../target/classes/repl/backend/csv/CSVSearch.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../target/classes/repl/backend/csv/CreatorFromRow.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../target/classes/repl/backend/csv/RowCreator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../target/classes/repl/backend/datasource/APICensusDatasource.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../target/classes/repl/backend/datasource/CensusDatasource.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../target/classes/repl/backend/datasource/MockCensusDatasource.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../target/classes/repl/backend/exception/DatasourceException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../target/classes/repl/backend/exception/ParserException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../target/classes/repl/backend/exception/SearchException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../target/classes/repl/backend/handler/BroadbandHandler.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../target/classes/repl/backend/handler/LoadHandler.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../target/classes/repl/backend/handler/SearchHandler.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../target/classes/repl/backend/handler/ViewHandler.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../target/classes/repl/backend/package-lock.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../target/classes/repl/backend/server/Server.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../target/classes/repl/frontend/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../target/classes/repl/frontend/package-lock.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../target/classes/repl/frontend/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../target/classes/repl/frontend/playwright.config.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../target/classes/repl/frontend/src/components/App.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../target/classes/repl/frontend/src/components/ControlledInput.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../target/classes/repl/frontend/src/components/REPL.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../target/classes/repl/frontend/src/components/REPLFunction.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../target/classes/repl/frontend/src/components/REPLHistory.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../target/classes/repl/frontend/src/components/REPLInput.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../target/classes/repl/frontend/src/datasource/csvProcessor.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../target/classes/repl/frontend/src/datasource/mockedJSON.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../target/classes/repl/frontend/src/index.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../target/classes/repl/frontend/src/main.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../target/classes/repl/frontend/src/styles/App.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../target/classes/repl/frontend/src/styles/index.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../target/classes/repl/frontend/src/styles/main.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../target/classes/repl/frontend/tests/App.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../target/classes/repl/frontend/tsconfig.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../target/classes/repl/frontend/vite.config.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../target/classes/repl/package-lock.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../target/classes/target/classes/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../target/classes/target/classes/.idea/checkstyle-idea.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../target/classes/target/classes/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../target/classes/target/classes/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../target/classes/target/classes/.idea/shelf/Uncommitted_changes_before_Update_at_10_23_23,_8_29_PM_[Changes]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../target/classes/target/classes/.idea/shelf/Uncommitted_changes_before_Update_at_10_23_23__8_29_PM__Changes_.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../target/classes/target/classes/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../target/classes/target/classes/moshi.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../target/classes/target/classes/repl/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../target/classes/target/classes/repl/backend/package-lock.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../target/classes/target/classes/repl/frontend/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../target/classes/target/classes/repl/frontend/package-lock.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../target/classes/target/classes/repl/frontend/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../target/classes/target/classes/repl/frontend/playwright.config.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../target/classes/target/classes/repl/frontend/src/components/App.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../target/classes/target/classes/repl/frontend/src/components/ControlledInput.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../target/classes/target/classes/repl/frontend/src/components/REPL.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../target/classes/target/classes/repl/frontend/src/components/REPLHistory.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../target/classes/target/classes/repl/frontend/src/datasource/csvProcessor.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../target/classes/target/classes/repl/frontend/src/datasource/mockedJSON.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../target/classes/target/classes/repl/frontend/src/index.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../target/classes/target/classes/repl/frontend/src/main.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../target/classes/target/classes/repl/frontend/src/styles/App.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../target/classes/target/classes/repl/frontend/src/styles/index.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../target/classes/target/classes/repl/frontend/src/styles/main.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../target/classes/target/classes/repl/frontend/tests/App.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../target/classes/target/classes/repl/frontend/tsconfig.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../target/classes/target/classes/repl/frontend/vite.config.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../target/classes/target/classes/repl/package-lock.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../target/classes/target/classes/target/classes/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../target/classes/target/classes/target/classes/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../target/classes/target/classes/target/classes/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../target/classes/target/classes/target/classes/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../target/classes/target/classes/target/classes/moshi.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../target/classes/target/classes/target/classes/repl/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../target/classes/target/classes/target/classes/repl/backend/package-lock.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../target/classes/target/classes/target/classes/repl/frontend/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../target/classes/target/classes/target/classes/repl/frontend/package-lock.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../target/classes/target/classes/target/classes/repl/frontend/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../target/classes/target/classes/target/classes/repl/frontend/playwright.config.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../target/classes/target/classes/target/classes/repl/frontend/src/components/App.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../target/classes/target/classes/target/classes/repl/frontend/src/components/ControlledInput.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../target/classes/target/classes/target/classes/repl/frontend/src/components/REPL.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../target/classes/target/classes/target/classes/repl/frontend/src/components/REPLHistory.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../target/classes/target/classes/target/classes/repl/frontend/src/datasource/csvProcessor.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../target/classes/target/classes/target/classes/repl/frontend/src/datasource/mockedJSON.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../target/classes/target/classes/target/classes/repl/frontend/src/index.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../target/classes/target/classes/target/classes/repl/frontend/src/main.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../target/classes/target/classes/target/classes/repl/frontend/src/styles/App.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../target/classes/target/classes/target/classes/repl/frontend/src/styles/index.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../target/classes/target/classes/target/classes/repl/frontend/src/styles/main.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../target/classes/target/classes/target/classes/repl/frontend/tests/App.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../target/classes/target/classes/target/classes/repl/frontend/tsconfig.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../target/classes/target/classes/target/classes/repl/frontend/vite.config.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../target/classes/target/classes/target/classes/repl/package-lock.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../target/classes/target/classes/target/classes/target/classes/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../target/classes/target/classes/target/classes/target/classes/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../target/classes/target/classes/target/classes/target/classes/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../target/classes/target/classes/target/classes/target/classes/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../target/classes/target/classes/target/classes/target/classes/moshi.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../target/classes/target/classes/target/classes/target/classes/repl/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../target/classes/target/classes/target/classes/target/classes/repl/frontend/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../target/classes/target/classes/target/classes/target/classes/repl/frontend/package-lock.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../target/classes/target/classes/target/classes/target/classes/repl/frontend/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../target/classes/target/classes/target/classes/target/classes/repl/frontend/playwright.config.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../target/classes/target/classes/target/classes/target/classes/repl/frontend/src/components/App.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../target/classes/target/classes/target/classes/target/classes/repl/frontend/src/components/ControlledInput.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../target/classes/target/classes/target/classes/target/classes/repl/frontend/src/components/REPL.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../target/classes/target/classes/target/classes/target/classes/repl/frontend/src/components/REPLHistory.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../target/classes/target/classes/target/classes/target/classes/repl/frontend/src/datasource/csvProcessor.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../target/classes/target/classes/target/classes/target/classes/repl/frontend/src/datasource/mockedJSON.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../target/classes/target/classes/target/classes/target/classes/repl/frontend/src/index.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../target/classes/target/classes/target/classes/target/classes/repl/frontend/src/main.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../target/classes/target/classes/target/classes/target/classes/repl/frontend/src/styles/App.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../target/classes/target/classes/target/classes/target/classes/repl/frontend/src/styles/index.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../target/classes/target/classes/target/classes/target/classes/repl/frontend/src/styles/main.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../target/classes/target/classes/target/classes/target/classes/repl/frontend/tests/App.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../target/classes/target/classes/target/classes/target/classes/repl/frontend/tsconfig.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../target/classes/target/classes/target/classes/target/classes/repl/frontend/vite.config.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../target/classes/target/classes/target/classes/target/classes/repl/package-lock.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../target/classes/target/classes/target/classes/target/classes/target/classes/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../target/classes/target/classes/target/classes/target/classes/target/classes/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../target/classes/target/classes/target/classes/target/classes/target/classes/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../target/classes/target/classes/target/classes/target/classes/target/classes/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../target/classes/target/classes/target/classes/target/classes/target/classes/moshi.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../target/classes/target/classes/target/classes/target/classes/target/classes/repl/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../target/classes/target/classes/target/classes/target/classes/target/classes/repl/frontend/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../target/classes/target/classes/target/classes/target/classes/target/classes/repl/frontend/package-lock.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../target/classes/target/classes/target/classes/target/classes/target/classes/repl/frontend/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../target/classes/target/classes/target/classes/target/classes/target/classes/repl/frontend/playwright.config.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../target/classes/target/classes/target/classes/target/classes/target/classes/repl/frontend/src/components/App.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../target/classes/target/classes/target/classes/target/classes/target/classes/repl/frontend/src/components/ControlledInput.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../target/classes/target/classes/target/classes/target/classes/target/classes/repl/frontend/src/components/REPL.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../target/classes/target/classes/target/classes/target/classes/target/classes/repl/frontend/src/components/REPLHistory.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../target/classes/target/classes/target/classes/target/classes/target/classes/repl/frontend/src/datasource/csvProcessor.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../target/classes/target/classes/target/classes/target/classes/target/classes/repl/frontend/src/datasource/mockedJSON.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../target/classes/target/classes/target/classes/target/classes/target/classes/repl/frontend/src/index.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../target/classes/target/classes/target/classes/target/classes/target/classes/repl/frontend/src/main.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../target/classes/target/classes/target/classes/target/classes/target/classes/repl/frontend/src/styles/App.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../target/classes/target/classes/target/classes/target/classes/target/classes/repl/frontend/src/styles/index.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../target/classes/target/classes/target/classes/target/classes/target/classes/repl/frontend/src/styles/main.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../target/classes/target/classes/target/classes/target/classes/target/classes/repl/frontend/tests/App.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../target/classes/target/classes/target/classes/target/classes/target/classes/repl/frontend/tsconfig.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../target/classes/target/classes/target/classes/target/classes/target/classes/repl/frontend/vite.config.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../target/classes/target/classes/target/classes/target/classes/target/classes/repl/package-lock.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../target/classes/target/classes/target/classes/target/classes/target/classes/target/classes/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../target/classes/target/classes/target/classes/target/classes/target/classes/target/classes/repl/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../target/classes/target/classes/target/classes/target/classes/target/classes/target/classes/repl/frontend/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../target/classes/target/classes/target/classes/target/classes/target/classes/target/classes/repl/frontend/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../target/classes/target/classes/target/classes/target/classes/target/classes/target/classes/repl/frontend/playwright.config.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../target/classes/target/classes/target/classes/target/classes/target/classes/target/classes/repl/frontend/src/components/App.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../target/classes/target/classes/target/classes/target/classes/target/classes/target/classes/repl/frontend/src/components/ControlledInput.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../target/classes/target/classes/target/classes/target/classes/target/classes/target/classes/repl/frontend/src/components/REPLHistory.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../target/classes/target/classes/target/classes/target/classes/target/classes/target/classes/repl/frontend/src/datasource/csvProcessor.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../target/classes/target/classes/target/classes/target/classes/target/classes/target/classes/repl/frontend/src/datasource/mockedJSON.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../target/classes/target/classes/target/classes/target/classes/target/classes/target/classes/repl/frontend/src/index.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../target/classes/target/classes/target/classes/target/classes/target/classes/target/classes/repl/frontend/src/main.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../target/classes/target/classes/target/classes/target/classes/target/classes/target/classes/repl/frontend/src/styles/App.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../target/classes/target/classes/target/classes/target/classes/target/classes/target/classes/repl/frontend/src/styles/index.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../target/classes/target/classes/target/classes/target/classes/target/classes/target/classes/repl/frontend/src/styles/main.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../target/classes/target/classes/target/classes/target/classes/target/classes/target/classes/repl/frontend/tests/App.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../target/classes/target/classes/target/classes/target/classes/target/classes/target/classes/repl/frontend/tsconfig.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../target/classes/target/classes/target/classes/target/classes/target/classes/target/classes/repl/frontend/vite.config.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../target/classes/target/classes/target/classes/target/classes/target/classes/target/classes/target/classes/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../target/classes/target/classes/target/classes/target/classes/target/classes/target/classes/target/classes/repl/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../target/classes/target/classes/target/classes/target/classes/target/classes/target/classes/target/classes/repl/frontend/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../target/classes/target/classes/target/classes/target/classes/target/classes/target/classes/target/classes/repl/frontend/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../target/classes/target/classes/target/classes/target/classes/target/classes/target/classes/target/classes/repl/frontend/playwright.config.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../target/classes/target/classes/target/classes/target/classes/target/classes/target/classes/target/classes/repl/frontend/src/components/App.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../target/classes/target/classes/target/classes/target/classes/target/classes/target/classes/target/classes/repl/frontend/src/components/ControlledInput.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../target/classes/target/classes/target/classes/target/classes/target/classes/target/classes/target/classes/repl/frontend/src/components/REPLHistory.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../target/classes/target/classes/target/classes/target/classes/target/classes/target/classes/target/classes/repl/frontend/src/datasource/csvProcessor.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../target/classes/target/classes/target/classes/target/classes/target/classes/target/classes/target/classes/repl/frontend/src/datasource/mockedJSON.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../target/classes/target/classes/target/classes/target/classes/target/classes/target/classes/target/classes/repl/frontend/src/index.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../target/classes/target/classes/target/classes/target/classes/target/classes/target/classes/target/classes/repl/frontend/src/main.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../target/classes/target/classes/target/classes/target/classes/target/classes/target/classes/target/classes/repl/frontend/src/styles/App.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../target/classes/target/classes/target/classes/target/classes/target/classes/target/classes/target/classes/repl/frontend/src/styles/index.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../target/classes/target/classes/target/classes/target/classes/target/classes/target/classes/target/classes/repl/frontend/src/styles/main.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../target/classes/target/classes/target/classes/target/classes/target/classes/target/classes/target/classes/repl/frontend/tests/App.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../target/classes/target/classes/target/classes/target/classes/target/classes/target/classes/target/classes/repl/frontend/tsconfig.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../target/classes/target/classes/target/classes/target/classes/target/classes/target/classes/target/classes/repl/frontend/vite.config.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../target/moshi-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/../../target/moshi-1.0-SNAPSHOT.jar" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 8
+}]]></component>
+  <component name="ProjectId" id="2XJAputOsSqxp3hX3xDJGvqI9nW" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "keyboard",
+    "last_opened_file_path": "/Users/lanayang-maccini/Desktop/CSCI0320/repl-bwangenh-lyangmac/repl/backend",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "editor.preferences.completion",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="3257499a-8d38-4a68-9a4f-35171d887705" name="Changes" comment="" />
+      <created>1698336995480</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1698336995480</updated>
+      <workItem from="1698336997575" duration="385000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>

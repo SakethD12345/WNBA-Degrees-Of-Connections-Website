@@ -59,47 +59,47 @@ public class TestConnectionHandler {
         Spark.awaitStop();
     }
 
-    /**
-     * This method forms a connection for the given url with the given parameters
-     * @param apiCall
-     * @param query1
-     * @param query2
-     * @return the connection
-     * @throws IOException
-     */
-    static private HttpURLConnection tryRequest(String apiCall, String query1, String query2) throws IOException {
-        URL requestURL = new URL("http://localhost:"+Spark.port()+"/"+apiCall + "?target=" + query1 + "&identifier=" + query2);
-        HttpURLConnection clientConnection = (HttpURLConnection) requestURL.openConnection();
-        clientConnection.connect();
-        return clientConnection;
-    }
-
-    /**
-     * This method tests to see if the ConnectionHandler class and its methods work properly
-     */
-    @Test
-    public void testBroadbandHandler() {
-        Boolean exceptionThrown = Boolean.FALSE;
-        try {
-            String state = "Rhode Island";
-            String county = "Providence";
-            HttpURLConnection clientConnection = tryRequest("broadband", this.mockedData.getStateCode(state),
-                    this.mockedData.getCountyCode(county, state));
-            assertEquals(200, clientConnection.getResponseCode());
-
-            Moshi moshi = new Moshi.Builder().build();
-            Type mapStringObject = Types.newParameterizedType(Map.class, String.class, Object.class);
-            JsonAdapter<Map<String, Object>> adapter = moshi.adapter(mapStringObject);
-
-            Map<String, Object> response = adapter.fromJson(new Buffer().readFrom(clientConnection.getInputStream()));
-            clientConnection.disconnect();
-            assertEquals(response.get("date and time"), "Monday");
-            assertEquals(response.get("broadband"), "900");
-        }
-        catch (IOException e) {
-            exceptionThrown = Boolean.TRUE;
-        }
-        assertFalse(exceptionThrown);
-    }
+//    /**
+//     * This method forms a connection for the given url with the given parameters
+//     * @param apiCall
+//     * @param query1
+//     * @param query2
+//     * @return the connection
+//     * @throws IOException
+//     */
+//    static private HttpURLConnection tryRequest(String apiCall, String query1, String query2) throws IOException {
+//        URL requestURL = new URL("http://localhost:"+Spark.port()+"/"+apiCall + "?target=" + query1 + "&identifier=" + query2);
+//        HttpURLConnection clientConnection = (HttpURLConnection) requestURL.openConnection();
+//        clientConnection.connect();
+//        return clientConnection;
+//    }
+//
+//    /**
+//     * This method tests to see if the ConnectionHandler class and its methods work properly
+//     */
+//    @Test
+//    public void testBroadbandHandler() {
+//        Boolean exceptionThrown = Boolean.FALSE;
+//        try {
+//            String state = "Rhode Island";
+//            String county = "Providence";
+//            HttpURLConnection clientConnection = tryRequest("broadband", this.mockedData.getStateCode(state),
+//                    this.mockedData.getCountyCode(county, state));
+//            assertEquals(200, clientConnection.getResponseCode());
+//
+//            Moshi moshi = new Moshi.Builder().build();
+//            Type mapStringObject = Types.newParameterizedType(Map.class, String.class, Object.class);
+//            JsonAdapter<Map<String, Object>> adapter = moshi.adapter(mapStringObject);
+//
+//            Map<String, Object> response = adapter.fromJson(new Buffer().readFrom(clientConnection.getInputStream()));
+//            clientConnection.disconnect();
+//            assertEquals(response.get("date and time"), "Monday");
+//            assertEquals(response.get("broadband"), "900");
+//        }
+//        catch (IOException e) {
+//            exceptionThrown = Boolean.TRUE;
+//        }
+//        assertFalse(exceptionThrown);
+//    }
 
 }

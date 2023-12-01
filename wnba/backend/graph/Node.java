@@ -9,5 +9,11 @@ public record Node(String fullName, ArrayList<Edge> edges) {
     public void addEdge(Edge edge) {
         edges.add(edge);
     }
+    public void print() {
+        System.out.println("Player: " + fullName);
+        for (Edge edge: edges) {
+            edge.print();
+        }
+    }
 }
 

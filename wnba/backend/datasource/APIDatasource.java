@@ -42,6 +42,9 @@ public class APIDatasource implements Datasource {
     public APIDatasource() {
         this.nodes = new ArrayList<Node>();
         this.generateGraph();
+        for (Node node: this.nodes) {
+            node.print();
+        }
     }
 
     /**
@@ -80,14 +83,14 @@ public class APIDatasource implements Datasource {
         ArrayList<Season> seasons = new ArrayList<>();
         try {
             for (int i = 1997; i <= 2023; i++) {
-                String data = "wnba/data" + Integer.toString(i) + ".json";
+                String data = "wnba/data/" + i + ".json";
                 Moshi moshi = new Moshi.Builder().build();
                 BufferedSource bufferedSource = Okio.buffer(Okio.source(
                         new File(data)));
                 JsonReader jsonReader = JsonReader.of(bufferedSource);
                 Season season = moshi.adapter(Season.class).fromJson(jsonReader);
                 for (Team team: season.teams()) {
-                    ArrayList<String> roster = team.roster();
+                    List<String> roster = team.roster();
                     ArrayList<Node> players = new ArrayList<>();
                     for (int j = 0; j < roster.size(); j++) {
                         String player = roster.get(j);
