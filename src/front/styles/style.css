@@ -118,6 +118,9 @@ a {
   width: 100px;
   height: 40px;
   border: 0;
+  border: 2px;
+  border-style: solid;
+  border-color: orangered;
 }
 
 #abt-button {
@@ -129,27 +132,15 @@ a {
   width: 100px;
   height: 40px;
   border: 0;
-}
-#history-button {
-  margin: 30px;
-  color: orangered;
-  background-color: white;
-  font-family: Optima, sans-serif;
-  border-radius: 10px;
-  width: 100px;
-  height: 40px;
-  border: 0;
+  border: 2px;
+  border-style: solid;
+  border-color: orangered;
 }
 
 #calc-button:hover {
   cursor: pointer;
 }
 #abt-button:hover {
-  background-color: orangered;
-  color: white;
-  cursor: pointer;
-}
-#history-button:hover {
   background-color: orangered;
   color: white;
   cursor: pointer;
@@ -174,17 +165,51 @@ a {
   flex-direction: column;
   width: 20%;
   background-color: lightgray;
-  height: 89.4vh;
+  height: 84vh;
   border-radius: 50px;
   overflow: hidden;
   align-items: center;
   color: orangered;
+  margin: 20px;
 }
 
 #input-output {
   display: flex;
+  flex-direction: column;
   align-items: center;
+  justify-content: center;
   background-color: white;
   height: 89.4vh;
   width: 80%;
+}
+#player-input {
+  display: flex;
+  flex-direction: row;
+}
+
+#first-player-input {
+  margin: 30px;
+}
+
+#second-player-input {
+  margin: 30px;
+}
+
+#submit-button {
+  margin: 30px;
+  color: orangered;
+  background-color: white;
+  font-family: Optima, sans-serif;
+  border-radius: 10px;
+  width: 100px;
+  height: 40px;
+  border: 2px;
+  border-style: solid;
+  border-color: orangered;
+}
+
+#submit-button:hover {
+  background-color: orangered;
+  color: white;
+  cursor: pointer;
 }
