@@ -3,14 +3,19 @@ package wnba.backend.datasource;
 import com.google.common.cache.Cache;
 import com.google.common.cache.CacheBuilder;
 import com.squareup.moshi.JsonAdapter;
+import com.squareup.moshi.JsonReader;
 import com.squareup.moshi.Moshi;
 import com.squareup.moshi.Types;
 import okio.Buffer;
+import okio.BufferedSource;
+import okio.Okio;
 import wnba.backend.exception.DatasourceException;
+import wnba.backend.graph.Connection;
 import wnba.backend.graph.Edge;
 import wnba.backend.graph.Node;
 
-import java.io.IOException;
+import java.io.*;
+import java.lang.reflect.Array;
 import java.lang.reflect.Type;
 import java.net.HttpURLConnection;
 import java.net.URL;
@@ -18,6 +23,7 @@ import java.net.URLConnection;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
@@ -28,14 +34,13 @@ import java.util.concurrent.TimeUnit;
  * county name to county code
  */
 public class APIDatasource implements Datasource {
-    private static HashMap<String, String> stateCodes;
-    private Cache<String, HashMap<String, String>> countyCache;
-    private Boolean stateCodesGenerated;
+    private ArrayList<Node> nodes;
 
     /**
      * The constructor builds the cache and defines its properties
      */
     public APIDatasource() {
+        this.nodes = new ArrayList<Node>();
         this.generateGraph();
     }
 
@@ -72,6 +77,43 @@ public class APIDatasource implements Datasource {
      * generate the actual graph: get data, create Nodes, Edges
      */
     public void generateGraph() {
+        ArrayList<Season> seasons = new ArrayList<>();
+        try {
+            for (int i = 1997; i <= 2023; i++) {
+                String data = "wnba/data" + Integer.toString(i) + ".json";
+                Moshi moshi = new Moshi.Builder().build();
+                BufferedSource bufferedSource = Okio.buffer(Okio.source(
+                        new File(data)));
+                JsonReader jsonReader = JsonReader.of(bufferedSource);
+                Season season = moshi.adapter(Season.class).fromJson(jsonReader);
+                for (Team team: season.teams()) {
+                    ArrayList<String> roster = team.roster();
+                    ArrayList<Node> players = new ArrayList<>();
+                    for (int j = 0; j < roster.size(); j++) {
+                        String player = roster.get(j);
+                        Node node = new Node(player, new ArrayList<>());
+                        this.nodes.add(node);
+                        players.add(node);
+                    }
+                    for (int k = 0; k < players.size(); k++) {
+                        Node player1 = players.get(k);
+                        for (int l = k + 1; l < players.size(); l++) {
+                            Node player2 = players.get(l);
+                            Edge edge = new Edge(player1, player2, new Connection(team.name(), season.season()));
+                            player1.addEdge(edge);
+                            player2.addEdge(edge);
+                        }
+                    }
+                }
+            }
+        }
+        catch (FileNotFoundException e) {
+            System.out.println(":(");
+        }
+        catch (IOException e) {
+            System.out.println(":((");
+        }
+
 
     }
 
