@@ -35,12 +35,14 @@ import java.util.concurrent.TimeUnit;
  */
 public class APIDatasource implements Datasource {
     private ArrayList<Node> nodes;
+    private HashMap<String, Node> nameToNode;
 
     /**
      * The constructor builds the cache and defines its properties
      */
     public APIDatasource() {
         this.nodes = new ArrayList<Node>();
+        this.nameToNode = new HashMap<>();
         this.generateGraph();
         for (Node node: this.nodes) {
             node.print();
@@ -80,7 +82,6 @@ public class APIDatasource implements Datasource {
      * generate the actual graph: get data, create Nodes, Edges
      */
     public void generateGraph() {
-        ArrayList<Season> seasons = new ArrayList<>();
         try {
             for (int i = 1997; i <= 2023; i++) {
                 String data = "wnba/data/" + i + ".json";
@@ -94,9 +95,14 @@ public class APIDatasource implements Datasource {
                     ArrayList<Node> players = new ArrayList<>();
                     for (int j = 0; j < roster.size(); j++) {
                         String player = roster.get(j);
-                        Node node = new Node(player, new ArrayList<>());
-                        this.nodes.add(node);
-                        players.add(node);
+                        if (!nameToNode.containsKey(player)) {
+                            Node node = new Node(player, new ArrayList<>());
+                            this.nodes.add(node);
+                            players.add(node);
+                            nameToNode.put(player, node);
+                        } else {
+                            players.add(nameToNode.get(player));
+                        }
                     }
                     for (int k = 0; k < players.size(); k++) {
                         Node player1 = players.get(k);
