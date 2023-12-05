@@ -13,7 +13,7 @@ export function History(props: HistoryProps) {
       title="history"
       tabIndex={0}
     >
-      <h2>Search History</h2>
+      <h2 id="history-header">Search History</h2>
       {props.history.map((command) => (
         <p title="history-line" aria-label={command} tabIndex={0}>
           {command}
