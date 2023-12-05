@@ -54,7 +54,7 @@ public class APIDatasource implements Datasource {
      * @return
      */
     public ArrayList<Edge> getConnection (String playerName1, String playerName2) throws DatasourceException {
-        if (playerName1.equals(playerName2)) {
+        if (playerName1 == null || playerName2 == null || playerName1.equals(playerName2)) {
             throw new DatasourceException("Only one player submitted.");
         }
         if (!nameToNode.containsKey(playerName1)) {
