@@ -1,9 +1,10 @@
-package wnba.backend.server;
+package src.back.server;
 
 import com.google.common.cache.Cache;
 import com.google.common.cache.CacheBuilder;
-import wnba.backend.datasource.APIDatasource;
-import wnba.backend.handler.*;
+
+import src.back.datasource.APIDatasource;
+import src.back.handler.*;
 import spark.Spark;
 
 import java.util.ArrayList;

@@ -1,8 +1,8 @@
-package wnba.backend.datasource;
+package src.back.datasource;
 
 import com.google.common.cache.Cache;
-import wnba.backend.graph.Edge;
-import wnba.backend.graph.Node;
+import src.back.graph.Edge;
+import src.back.graph.Node;
 
 import java.lang.reflect.Array;
 import java.util.ArrayList;

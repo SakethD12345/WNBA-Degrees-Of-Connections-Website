@@ -1,4 +1,4 @@
-package wnba.backend.datasource;
+package src.back.datasource;
 
 import com.google.common.cache.Cache;
 import com.google.common.cache.CacheBuilder;
@@ -9,14 +9,12 @@ import com.squareup.moshi.Types;
 import okio.Buffer;
 import okio.BufferedSource;
 import okio.Okio;
-import wnba.backend.exception.DatasourceException;
-import wnba.backend.graph.Connection;
-import wnba.backend.graph.Edge;
-import wnba.backend.graph.Node;
+import src.back.exception.DatasourceException;
+import src.back.graph.Connection;
+import src.back.graph.Edge;
+import src.back.graph.Node;
 
 import java.io.*;
-import java.lang.reflect.Array;
-import java.lang.reflect.Type;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.net.URLConnection;
@@ -122,8 +120,6 @@ public class APIDatasource implements Datasource {
         catch (IOException e) {
             System.out.println(":((");
         }
-
-
     }
 
 

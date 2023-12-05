@@ -1,4 +1,4 @@
-package wnba.backend.graph;
+package src.back.graph;
 
 public record Connection(String team, String year) {
     public void print() {

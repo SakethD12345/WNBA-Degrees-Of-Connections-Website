@@ -1,6 +1,6 @@
-package wnba.backend;
+package src.back;
 
-import wnba.backend.server.Server;
+import src.back.server.Server;
 
 public final class Main {
     /**

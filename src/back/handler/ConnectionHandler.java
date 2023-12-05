@@ -1,10 +1,10 @@
-package wnba.backend.handler;
+package src.back.handler;
 
 import com.squareup.moshi.JsonAdapter;
 import com.squareup.moshi.Moshi;
 import com.squareup.moshi.Types;
-import wnba.backend.datasource.Datasource;
-import wnba.backend.exception.DatasourceException;
+import src.back.datasource.Datasource;
+import src.back.exception.DatasourceException;
 import spark.Request;
 import spark.Response;
 import spark.Route;
@@ -18,7 +18,7 @@ import java.util.List;
 import java.util.Map;
 
 import com.google.common.cache.Cache;
-import wnba.backend.graph.Edge;
+import src.back.graph.Edge;
 
 /**
  * This class deals with getting the broadband percentage

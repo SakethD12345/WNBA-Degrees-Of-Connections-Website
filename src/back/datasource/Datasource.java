@@ -1,9 +1,9 @@
-package wnba.backend.datasource;
+package src.back.datasource;
 
 import com.google.common.cache.Cache;
-import wnba.backend.exception.DatasourceException;
-import wnba.backend.graph.Edge;
-import wnba.backend.graph.Node;
+import src.back.exception.DatasourceException;
+import src.back.graph.Edge;
+import src.back.graph.Node;
 
 import java.io.IOException;
 import java.util.ArrayList;
