@@ -53,17 +53,17 @@ public class APIDatasource implements Datasource {
      * @param playerName2
      * @return
      */
-    public ArrayList<Edge> getConnection (String playerName1, String playerName2) {
+    public ArrayList<Edge> getConnection (String playerName1, String playerName2) throws DatasourceException {
         if (playerName1.equals(playerName2)) {
-            return new ArrayList<>();
+            throw new DatasourceException("Only one player submitted.");
         }
         if (!nameToNode.containsKey(playerName1)) {
             // return error
-            System.out.println("Invalid first player.");
+            throw new DatasourceException("Invalid first player.");
         }
         if (!nameToNode.containsKey(playerName2)) {
             // return error
-            System.out.println("Invalid second player");
+            throw new DatasourceException("Invalid second player.");
         }
         ArrayList<String> toCheck = new ArrayList<>();
         ArrayList<String> visited = new ArrayList<>();

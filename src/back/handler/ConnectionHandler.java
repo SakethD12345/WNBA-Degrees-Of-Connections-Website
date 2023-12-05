@@ -48,14 +48,23 @@ public class ConnectionHandler implements Route {
         String player1 = request.queryParams("player1");
         String player2 = request.queryParams("player2");
 
-        ArrayList<Edge> data = this.datasource.getConnection(player1, player2);
-        int counter = 0;
-        for (Edge edge: data) {
-            counter ++;
-            responseMap.put(Integer.toString(counter), edge.toMap());
-
+        try {
+            ArrayList<Edge> data = this.datasource.getConnection(player1, player2);
+            if (data.isEmpty()) {
+                responseMap.put("result", "failure");
+            } else {
+                responseMap.put("result", "success");
+                int counter = 0;
+                for (Edge edge: data) {
+                    counter ++;
+                    responseMap.put(Integer.toString(counter), edge.toMap());
+                }
+                responseMap.put("count", Integer.toString(counter));
+            }
+        } catch (DatasourceException e) {
+            responseMap.put("result", "error");
+            responseMap.put("error", e.getMessage());
         }
-        responseMap.put("count", Integer.toString(counter));
         return mapAdapter.toJson(responseMap);
     }
 }

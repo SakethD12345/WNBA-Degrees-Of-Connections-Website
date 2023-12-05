@@ -37,13 +37,6 @@ public class Server {
         });
 
         APIDatasource datasource = new APIDatasource();
-        ArrayList<Edge> connection = datasource.getConnection("Candace Parker", "Sue Bird");
-        for (Edge edge: connection) {
-            System.out.println("connect: ");
-            System.out.println(edge.toString());
-            System.out.println("\n");
-        }
-
         ConnectionHandler connectionHandler = new ConnectionHandler(datasource);
         Spark.get("connections", connectionHandler);
 
