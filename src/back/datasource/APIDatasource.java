@@ -1,30 +1,17 @@
 package src.back.datasource;
 
-import com.google.common.cache.Cache;
-import com.google.common.cache.CacheBuilder;
-import com.squareup.moshi.JsonAdapter;
-import com.squareup.moshi.JsonReader;
-import com.squareup.moshi.Moshi;
-import com.squareup.moshi.Types;
-import okio.Buffer;
+import com.squareup.moshi.*;
 import okio.BufferedSource;
 import okio.Okio;
 import src.back.exception.DatasourceException;
 import src.back.graph.Connection;
 import src.back.graph.Edge;
-import src.back.graph.Node;
 
 import java.io.*;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.net.URLConnection;
-import java.time.LocalDateTime;
-import java.time.format.DateTimeFormatter;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.List;
-import java.util.concurrent.TimeUnit;
+import java.util.*;
 
 /**
  * This class implements the Datasource class and its 4 corresponding methods.
@@ -32,19 +19,14 @@ import java.util.concurrent.TimeUnit;
  * county name to county code
  */
 public class APIDatasource implements Datasource {
-    private ArrayList<Node> nodes;
-    private HashMap<String, Node> nameToNode;
+    private HashMap<String, ArrayList<Edge>> nameToNode;
 
     /**
      * The constructor builds the cache and defines its properties
      */
     public APIDatasource() {
-        this.nodes = new ArrayList<Node>();
         this.nameToNode = new HashMap<>();
         this.generateGraph();
-        for (Node node: this.nodes) {
-            node.print();
-        }
     }
 
     /**
@@ -67,22 +49,79 @@ public class APIDatasource implements Datasource {
 
     /**
      * generate the actual connection: we
-     * @param player1
-     * @param player2
+     * @param playerName1
+     * @param playerName2
      * @return
      */
-    public ArrayList<Edge> getConnection (Node player1, Node player2) {
+    public ArrayList<Edge> getConnection (String playerName1, String playerName2) {
+        if (playerName1.equals(playerName2)) {
+            return new ArrayList<>();
+        }
+        if (!nameToNode.containsKey(playerName1)) {
+            // return error
+            System.out.println("Invalid first player.");
+        }
+        if (!nameToNode.containsKey(playerName2)) {
+            // return error
+            System.out.println("Invalid second player");
+        }
+        ArrayList<String> toCheck = new ArrayList<>();
+        ArrayList<String> visited = new ArrayList<>();
+        HashMap<String, String> cameFrom = new HashMap<>();
+        ArrayList<Edge> connection = new ArrayList<>();
 
-        return null;
+        toCheck.add(playerName1);
+        visited.add(playerName1);
+
+        while (!toCheck.isEmpty()) {
+            String checkingPlayer = toCheck.remove(0);
+            ArrayList<String> teammates = new ArrayList<>();
+                for (Edge edge: nameToNode.get(checkingPlayer)) {
+                    String teammate = edge.getOppositePlayer(checkingPlayer);
+                    if (!teammates.contains(teammate)) {
+                        teammates.add(teammate);
+                    }
+                }
+
+            if (playerName2.equals(checkingPlayer)) {
+                connection = this.connectionHelper(connection, cameFrom, playerName2, playerName1);
+            }
+            for (String link: teammates) {
+                if (!visited.contains(link)) {
+                    visited.add(link);
+                    toCheck.add(link);
+                    cameFrom.put(link, checkingPlayer);
+                }
+            }
+        }
+        return connection;
+    }
+
+    private ArrayList<Edge> connectionHelper(ArrayList<Edge> currentConnection, HashMap<String, String> cameFrom, String currentPlayer, String origPlayer) {
+        if (currentPlayer.equals(origPlayer)) {
+            return currentConnection;
+        }
+        String nextPlayer = cameFrom.get(currentPlayer);
+        currentConnection = this.connectionHelper(currentConnection, cameFrom, nextPlayer, origPlayer);
+        Edge connect = new Edge(null, null, null);
+        for (Edge edge: nameToNode.get(nextPlayer)) {
+            if (edge.getOppositePlayer(nextPlayer).equals(currentPlayer)) {
+                connect = edge;
+            }
+        }
+        currentConnection.add(connect);
+        return currentConnection;
     }
 
     /**
      * generate the actual graph: get data, create Nodes, Edges
      */
     public void generateGraph() {
+        int counter = 0;
         try {
             for (int i = 1997; i <= 2023; i++) {
-                String data = "wnba/data/" + i + ".json";
+                counter = i;
+                String data = "src/data/" + i + ".json";
                 Moshi moshi = new Moshi.Builder().build();
                 BufferedSource bufferedSource = Okio.buffer(Okio.source(
                         new File(data)));
@@ -90,25 +129,19 @@ public class APIDatasource implements Datasource {
                 Season season = moshi.adapter(Season.class).fromJson(jsonReader);
                 for (Team team: season.teams()) {
                     List<String> roster = team.roster();
-                    ArrayList<Node> players = new ArrayList<>();
                     for (int j = 0; j < roster.size(); j++) {
                         String player = roster.get(j);
                         if (!nameToNode.containsKey(player)) {
-                            Node node = new Node(player, new ArrayList<>());
-                            this.nodes.add(node);
-                            players.add(node);
-                            nameToNode.put(player, node);
-                        } else {
-                            players.add(nameToNode.get(player));
+                            nameToNode.put(player, new ArrayList<>());
                         }
                     }
-                    for (int k = 0; k < players.size(); k++) {
-                        Node player1 = players.get(k);
-                        for (int l = k + 1; l < players.size(); l++) {
-                            Node player2 = players.get(l);
+                    for (int k = 0; k < roster.size(); k++) {
+                        String player1 = roster.get(k);
+                        for (int l = k + 1; l < roster.size(); l++) {
+                            String player2 = roster.get(l);
                             Edge edge = new Edge(player1, player2, new Connection(team.name(), season.season()));
-                            player1.addEdge(edge);
-                            player2.addEdge(edge);
+                            nameToNode.get(player1).add(edge);
+                            nameToNode.get(player2).add(edge);
                         }
                     }
                 }
@@ -119,12 +152,9 @@ public class APIDatasource implements Datasource {
         }
         catch (IOException e) {
             System.out.println(":((");
+            System.out.println(counter);
         }
     }
-
-
-
-
 }
 
 

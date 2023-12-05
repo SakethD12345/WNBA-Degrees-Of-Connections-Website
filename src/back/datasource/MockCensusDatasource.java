@@ -1,10 +1,7 @@
 package src.back.datasource;
 
-import com.google.common.cache.Cache;
 import src.back.graph.Edge;
-import src.back.graph.Node;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 
 /**
@@ -16,7 +13,7 @@ public class MockCensusDatasource implements Datasource {
     public MockCensusDatasource() {
 
     }
-    public ArrayList<Edge> getConnection(Node player1, Node player2) {
+    public ArrayList<Edge> getConnection(String playerName1, String playerName2) {
         return null;
     }
 

@@ -4,6 +4,7 @@ import com.google.common.cache.Cache;
 import com.google.common.cache.CacheBuilder;
 
 import src.back.datasource.APIDatasource;
+import src.back.graph.Edge;
 import src.back.handler.*;
 import spark.Spark;
 
@@ -35,8 +36,18 @@ public class Server {
             response.header("Access-Control-Allow-Methods", "*");
         });
 
-        ConnectionHandler connectionHandler = new ConnectionHandler(new APIDatasource());
+        APIDatasource datasource = new APIDatasource();
+        ArrayList<Edge> connection = datasource.getConnection("Candace Parker", "Sue Bird");
+        for (Edge edge: connection) {
+            System.out.println("connect: ");
+            System.out.println(edge.toString());
+            System.out.println("\n");
+        }
+
+        ConnectionHandler connectionHandler = new ConnectionHandler(datasource);
         Spark.get("connections", connectionHandler);
+
+
 
         Spark.init();
         Spark.awaitInitialization();
