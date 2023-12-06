@@ -73,6 +73,7 @@ async function makeConnection(
           ...props.history,
         ]);
       } else if (json.result === "success") {
+        props.setOutput([PlayerOne, PlayerTwo]);
         props.setHistory([
           "The number of connections between " +
             PlayerOne +
@@ -82,6 +83,7 @@ async function makeConnection(
             json.count,
           ...props.history,
         ]);
+
         count = json.count;
       }
     });

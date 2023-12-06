@@ -18,11 +18,11 @@ export function PlayerOutput(props: PlayerInputProps) {
       <div id="players">
         <div id="player-one-output">
           <img id="player-one-logo" src={props.player1Logo} />
-          <p className="player-name">Player One</p>
+          <p className="player-name">{props.output[0]}</p>
         </div>
         <div id="player-two-output">
           <img id="player-two-logo" src={props.player2Logo} />
-          <p className="player-name">Player Two</p>
+          <p className="player-name">{props.output[1]}</p>
         </div>
       </div>
       <div id="results"></div>

@@ -6,7 +6,7 @@ import { useState } from "react";
 
 function App() {
   const [history, setHistory] = useState<string[]>([]);
-  const [output, setOutput] = useState<string[]>([]);
+  const [output, setOutput] = useState<string[]>(["Player One", "Player Two"]);
   const [player1Logo, setPlayer1Logo] = useState<string>(
     "https://static.vecteezy.com/system/resources/previews/012/996/778/non_2x/sport-ball-basketball-line-art-free-png.png"
   );
