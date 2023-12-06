@@ -6,13 +6,19 @@ import { useState } from "react";
 
 function App() {
   const [history, setHistory] = useState<string[]>([]);
+  const [output, setOutput] = useState<string[]>([]);
 
   return (
     <div className="App" id="app">
       <History history={history} />
       <div id="input-output">
-        <PlayerInput history={history} setHistory={setHistory} />
-        <PlayerOutput />
+        <PlayerInput
+          history={history}
+          setHistory={setHistory}
+          output={output}
+          setOutput={setOutput}
+        />
+        <PlayerOutput output={output} setOutput={setOutput} />
       </div>
     </div>
   );
