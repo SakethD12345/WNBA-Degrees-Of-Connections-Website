@@ -167,10 +167,15 @@ a {
   background-color: lightgray;
   height: 84vh;
   border-radius: 50px;
-  overflow: hidden;
+  overflow: scroll;
   align-items: center;
   color: orangered;
   margin: 20px;
+}
+
+#history-header {
+  position: sticky;
+  top: 0;
 }
 
 #input-output {
@@ -185,6 +190,8 @@ a {
 #player-input {
   display: flex;
   flex-direction: row;
+  height: 50%;
+  align-items: center;
 }
 
 #first-player-input {
@@ -212,4 +219,8 @@ a {
   background-color: orangered;
   color: white;
   cursor: pointer;
+}
+
+#player-output {
+  height: 50%;
 }
