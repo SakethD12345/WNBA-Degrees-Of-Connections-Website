@@ -8,6 +8,9 @@ interface PlayerInputProps {
 
   output: string[];
   setOutput: Dispatch<SetStateAction<string[]>>;
+
+  setPlayer1Logo: Dispatch<SetStateAction<string>>;
+  setPlayer2Logo: Dispatch<SetStateAction<string>>;
 }
 
 export function PlayerInput(props: PlayerInputProps) {
@@ -18,7 +21,7 @@ export function PlayerInput(props: PlayerInputProps) {
   return (
     <div id="player-input">
       <div id="first-player-input">
-        <legend>Enter first player:</legend>
+        <legend className="input-header">Enter first player:</legend>
         <ControlledInput
           value={inputString1}
           setValue={setInputString1}
@@ -26,7 +29,7 @@ export function PlayerInput(props: PlayerInputProps) {
         />
       </div>
       <div id="second-player-input">
-        <legend>Enter second player:</legend>
+        <legend className="input-header">Enter second player:</legend>
         <ControlledInput
           value={inputString2}
           setValue={setInputString2}
@@ -36,11 +39,9 @@ export function PlayerInput(props: PlayerInputProps) {
       <button
         id="submit-button"
         onClick={() => {
-          props.setHistory([
-            inputString1 + " " + inputString2,
-            ...props.history,
-          ]);
-          makeConnection(inputString1, inputString2, isValidCall, count);
+          makeConnection(inputString1, inputString2, isValidCall, count, props);
+          setInputString1("");
+          setInputString2("");
         }}
       >
         Submit
@@ -53,18 +54,35 @@ async function makeConnection(
   PlayerOne: string,
   PlayerTwo: string,
   isValidCall: boolean,
-  count: number
+  count: number,
+  props: PlayerInputProps
 ) {
-  let message = "";
   fetch(
-    "http://localhost:3232/connection?player1=" +
+    "http://localhost:5555/connections?player1=" +
       PlayerOne +
       "&player2=" +
       PlayerTwo
   )
     .then((response) => response.json())
     .then((json) => {
-      json.message === "success" ? (isValidCall = true) : (isValidCall = false);
-      isValidCall ? (count = json.count) : (count = -1);
+      if (json.result === "error") {
+        props.setHistory([json.error, ...props.history]);
+      } else if (json.result === "failure") {
+        props.setHistory([
+          "No connection between " + PlayerOne + " and " + PlayerTwo,
+          ...props.history,
+        ]);
+      } else if (json.result === "success") {
+        props.setHistory([
+          "The number of connections between " +
+            PlayerOne +
+            " and " +
+            PlayerTwo +
+            " is " +
+            json.count,
+          ...props.history,
+        ]);
+        count = json.count;
+      }
     });
 }

@@ -165,7 +165,7 @@ a {
   flex-direction: column;
   width: 20%;
   background-color: lightgray;
-  height: 84vh;
+  height: 82vh;
   border-radius: 50px;
   overflow: scroll;
   align-items: center;
@@ -176,6 +176,12 @@ a {
 #history-header {
   position: sticky;
   top: 0;
+}
+
+.input-header {
+  margin-bottom: 10px;
+  color: orangered;
+  font-weight: bold;
 }
 
 #input-output {
@@ -190,8 +196,15 @@ a {
 #player-input {
   display: flex;
   flex-direction: row;
-  height: 50%;
+  height: 100px;
   align-items: center;
+  border: 2.5px;
+  border-style: solid;
+  border-color: orangered;
+  border-radius: 10px;
+  width: 70%;
+  justify-content: center;
+  margin-bottom: 20px;
 }
 
 #first-player-input {
@@ -222,5 +235,44 @@ a {
 }
 
 #player-output {
-  height: 50%;
+  height: 75%;
+  display: flex;
+  flex-direction: column;
+}
+#players {
+  height: 40%;
+  display: flex;
+  flex-direction: row;
+}
+
+#player-one-output {
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#player-one-logo {
+  width: 175px;
+}
+
+#player-two-output {
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#player-two-logo {
+  width: 175px;
+}
+
+.player-name {
+  color: orangered;
+  font-size: large;
+}
+
+#results {
+  height: 60%;
+  overflow: scroll;
 }
