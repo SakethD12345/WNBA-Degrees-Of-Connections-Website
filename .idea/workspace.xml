@@ -5,10 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b1a4e374-76b6-4beb-a9ff-1639df75ceab" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/moshi.iml" beforeDir="false" afterPath="$PROJECT_DIR$/moshi.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/front/components/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/front/components/App.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/front/components/History.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/front/components/History.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/front/components/PlayerInput.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/front/components/PlayerInput.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/front/components/PlayerOutput.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/front/components/PlayerOutput.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/front/styles/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/front/styles/style.css" afterDir="false" />
@@ -139,7 +138,7 @@
       <workItem from="1701740402149" duration="193000" />
       <workItem from="1701740661977" duration="66000" />
       <workItem from="1701740822571" duration="18137000" />
-      <workItem from="1701826493777" duration="1291000" />
+      <workItem from="1701826493777" duration="3807000" />
     </task>
     <servers />
   </component>
