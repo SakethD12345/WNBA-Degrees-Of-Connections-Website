@@ -150,7 +150,7 @@ a {
 #player-input {
   display: flex;
   flex-direction: row;
-  height: 100px;
+  height: 120px;
   align-items: center;
   border: 2.5px;
   border-style: solid;
@@ -162,11 +162,13 @@ a {
 }
 
 #first-player-input {
-  margin: 30px;
+  align-self: flex-start;
+  margin: 10px 50px;
 }
 
 #second-player-input {
-  margin: 30px;
+  align-self: flex-start;
+  margin: 10px 50px;
 }
 
 #submit-button {
@@ -241,4 +243,10 @@ a {
 
 #popup-text {
   font-size: 12px;
+}
+
+#player-dropdown {
+  font-size: 12px;
+  max-height: 40px;
+  outline: 1pt;
 }
