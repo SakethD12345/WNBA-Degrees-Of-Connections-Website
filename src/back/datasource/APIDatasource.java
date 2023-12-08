@@ -27,25 +27,10 @@ public class APIDatasource implements Datasource {
     public APIDatasource() {
         this.nameToNode = new HashMap<>();
         this.generateGraph();
+
+
     }
 
-    /**
-     * This method gives the program the ability to connect with a given URL
-     * @param requestURL is the given URL
-     * @return the connection
-     * @throws DatasourceException
-     * @throws IOException
-     */
-    public static HttpURLConnection connect(URL requestURL) throws DatasourceException, IOException {
-        URLConnection urlConnection = requestURL.openConnection();
-        if (!(urlConnection instanceof HttpURLConnection clientConnection))
-            throw new DatasourceException("unexpected: result of connection wasn't HTTP");
-        clientConnection.connect(); // GET
-        if (clientConnection.getResponseCode() != 200)
-            throw new DatasourceException("unexpected: API connection not success status " +
-                    clientConnection.getResponseMessage());
-        return clientConnection;
-    }
 
     /**
      * generate the actual connection: we

@@ -1,7 +1,7 @@
 import "../styles/style.css";
 import { Dispatch, SetStateAction, useState } from "react";
 
-interface PlayerInputProps {
+interface PlayerOutputProps {
   inputtedPlayers: string[];
   setInputtedPlayers: Dispatch<SetStateAction<string[]>>;
 
@@ -15,7 +15,7 @@ interface PlayerInputProps {
   setPlayer2Logo: Dispatch<SetStateAction<string>>;
 }
 
-export function PlayerOutput(props: PlayerInputProps) {
+export function PlayerOutput(props: PlayerOutputProps) {
   return (
     <div id="player-output">
       <div id="players">
@@ -28,7 +28,11 @@ export function PlayerOutput(props: PlayerInputProps) {
           <p className="player-name">{props.inputtedPlayers[1]}</p>
         </div>
       </div>
-      <div id="results"></div>
+      <div id="results">
+        {props.connectingPlayers.map((row: string[]) => (
+          <div className="connecting-player-div"></div>
+        ))}
+      </div>
     </div>
   );
 }

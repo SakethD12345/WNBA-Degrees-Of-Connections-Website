@@ -51,7 +51,11 @@ export async function makeConnection(
         count = json.count;
         let connections: string[][] = [];
         for (let i = 0; i < json.count; i++) {
-          connections[i] = json[i + 1];
+          connections[i] = [];
+          let tempJson = json[i + 1];
+          connections[i][0] = tempJson["Player 1"];
+          connections[i][1] = tempJson["Player 2"];
+          connections[i][1] = tempJson["Team"];
         }
         console.log(connections);
         props.setConnectingPlayers(connections);
