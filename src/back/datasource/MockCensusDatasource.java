@@ -1,5 +1,6 @@
 package src.back.datasource;
 
+import src.back.exception.DatasourceException;
 import src.back.graph.Edge;
 
 import java.util.ArrayList;
@@ -21,5 +22,7 @@ public class MockCensusDatasource implements Datasource {
     }
     public Set<String> getPlayers() {return null;};
     public HashMap<String, ArrayList<Edge>> getMap() {return null;};
+    public String getTicketing(String team) throws DatasourceException {return null;}
+
 
 }

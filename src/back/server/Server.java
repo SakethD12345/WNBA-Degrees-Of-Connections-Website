@@ -4,6 +4,7 @@ import com.google.common.cache.Cache;
 import com.google.common.cache.CacheBuilder;
 
 import src.back.datasource.APIDatasource;
+import src.back.datasource.TicketingDatasource;
 import src.back.exception.DatasourceException;
 import src.back.graph.Edge;
 import src.back.handler.*;
@@ -44,6 +45,9 @@ public class Server {
 
         DatasetHandler datasetHandler = new DatasetHandler(datasource);
         Spark.get("dataset", datasetHandler);
+
+        TicketingHandler ticketingHandler = new TicketingHandler(new TicketingDatasource());
+        Spark.get("ticketing", ticketingHandler);
 
         Spark.init();
         Spark.awaitInitialization();

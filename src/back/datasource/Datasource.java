@@ -16,4 +16,5 @@ public interface Datasource {
     public ArrayList<Edge> getConnection(String playerName1, String playerName2) throws DatasourceException;
     public Set<String> getPlayers();
     public HashMap<String, ArrayList<Edge>> getMap();
+    public String getTicketing(String team) throws DatasourceException;
 }
