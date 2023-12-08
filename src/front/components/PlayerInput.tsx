@@ -1,70 +1,66 @@
 import "../styles/style.css";
 import { Dispatch, SetStateAction, useState } from "react";
 import { ControlledInput } from "./ControlledInput";
+import { makeConnection } from "./ServerAccess";
 
 interface PlayerInputProps {
+  inputString1: string;
+  setInputString1: Dispatch<SetStateAction<string>>;
+
+  inputString2: string;
+  setInputString2: Dispatch<SetStateAction<string>>;
+
   history: string[];
   setHistory: Dispatch<SetStateAction<string[]>>;
 
-  output: string[];
-  setOutput: Dispatch<SetStateAction<string[]>>;
+  inputtedPlayers: string[];
+  setInputtedPlayers: Dispatch<SetStateAction<string[]>>;
+
+  connectingPlayers: string[][];
+  setConnectingPlayers: Dispatch<SetStateAction<string[][]>>;
+
+  setPlayer1Logo: Dispatch<SetStateAction<string>>;
+  setPlayer2Logo: Dispatch<SetStateAction<string>>;
 }
 
 export function PlayerInput(props: PlayerInputProps) {
-  const [inputString1, setInputString1] = useState<string>("");
-  const [inputString2, setInputString2] = useState<string>("");
   let isValidCall: boolean = false;
   let count: number = -1;
+
+  function handleSubmit() {
+    makeConnection(
+      props.inputString1,
+      props.inputString2,
+      isValidCall,
+      count,
+      props
+    );
+
+    props.setInputString1("");
+    props.setInputString2("");
+  }
+
   return (
     <div id="player-input">
       <div id="first-player-input">
-        <legend>Enter first player:</legend>
+        <legend className="input-header">Enter first player:</legend>
         <ControlledInput
-          value={inputString1}
-          setValue={setInputString1}
+          value={props.inputString1}
+          setValue={props.setInputString1}
           ariaLabel={"Player 1 input"}
         />
       </div>
       <div id="second-player-input">
-        <legend>Enter second player:</legend>
+        <legend className="input-header">Enter second player:</legend>
         <ControlledInput
-          value={inputString2}
-          setValue={setInputString2}
+          value={props.inputString2}
+          setValue={props.setInputString2}
           ariaLabel={"Player 2 input"}
         />
       </div>
-      <button
-        id="submit-button"
-        onClick={() => {
-          props.setHistory([
-            inputString1 + " " + inputString2,
-            ...props.history,
-          ]);
-          makeConnection(inputString1, inputString2, isValidCall, count);
-        }}
-      >
+      <button id="submit-button" onClick={() => handleSubmit()}>
         Submit
       </button>
     </div>
   );
-}
-
-async function makeConnection(
-  PlayerOne: string,
-  PlayerTwo: string,
-  isValidCall: boolean,
-  count: number
-) {
-  let message = "";
-  fetch(
-    "http://localhost:3232/connection?player1=" +
-      PlayerOne +
-      "&player2=" +
-      PlayerTwo
-  )
-    .then((response) => response.json())
-    .then((json) => {
-      json.message === "success" ? (isValidCall = true) : (isValidCall = false);
-      isValidCall ? (count = json.count) : (count = -1);
-    });
 }
