@@ -19,12 +19,24 @@
         />
         <p id="wnba-logo-text">WNBA</p>
       </a>
+      <dialog class="popup" id="popup">
+        <p class="popup-text">
+          This project is intended to be a fun tool to allow users to find
+          teammate connections between WNBA players. Enter in two players' names
+          and press submit to find the path of teammates that connects them!
+        </p>
+      </dialog>
       <div id="bar-buttons">
-        <button id="calc-button">Calculator</button>
         <button id="abt-button">About</button>
       </div>
     </div>
     <div id="root"></div>
     <script type="module" src="/src/front/components/main.tsx"></script>
+    <script>
+      document.getElementById('abt-button').addEventListener('click', function() {
+        var popup = document.getElementById('popup');
+        popup.open = !popup.open;
+      });
+    </script>
   </body>
 </html>
