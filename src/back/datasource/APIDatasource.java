@@ -164,6 +164,9 @@ public class APIDatasource implements Datasource {
     public HashMap<String, ArrayList<Edge>> getMap() {
         return this.nameToNode;
     }
+    public String getTicketing(String team) throws DatasourceException {
+        return null;
+    }
 }
 
 
