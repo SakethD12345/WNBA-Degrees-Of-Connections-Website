@@ -62,3 +62,11 @@ export async function makeConnection(
       }
     });
 }
+
+
+export async function getAllPlayers(){
+  const response = await fetch("http://localhost:5555/dataset");
+  const json = await response.json();
+  const players: string[] = json.players;
+  return players;
+}
