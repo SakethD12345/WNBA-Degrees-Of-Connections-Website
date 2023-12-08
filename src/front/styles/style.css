@@ -32,7 +32,7 @@ a {
   background-color: white;
   display: flex;
   align-items: center;
-  font-size: xx-large;
+  font-size: 12;
   padding: 0;
   justify-content: space-between;
   position: fixed;
@@ -231,4 +231,14 @@ a {
   height: 60%;
   overflow: scroll;
   width: 1000px;
+}
+
+#popup {
+  height: 100px;
+  width: 400px;
+  text-align: center;
+}
+
+#popup-text {
+  font-size: 12px;
 }
