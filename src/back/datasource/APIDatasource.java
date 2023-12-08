@@ -12,6 +12,7 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 import java.net.URLConnection;
 import java.util.*;
+import java.util.stream.Stream;
 
 /**
  * This class implements the Datasource class and its 4 corresponding methods.
@@ -139,6 +140,14 @@ public class APIDatasource implements Datasource {
             System.out.println(":((");
             System.out.println(counter);
         }
+    }
+
+    public Set<String> getPlayers() {
+        return this.nameToNode.keySet();
+    }
+
+    public HashMap<String, ArrayList<Edge>> getMap() {
+        return this.nameToNode;
     }
 }
 

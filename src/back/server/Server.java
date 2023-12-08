@@ -38,10 +38,12 @@ public class Server {
         });
 
         APIDatasource datasource = new APIDatasource();
+
         ConnectionHandler connectionHandler = new ConnectionHandler(datasource);
         Spark.get("connections", connectionHandler);
 
-
+        DatasetHandler datasetHandler = new DatasetHandler(datasource);
+        Spark.get("dataset", datasetHandler);
 
         Spark.init();
         Spark.awaitInitialization();
