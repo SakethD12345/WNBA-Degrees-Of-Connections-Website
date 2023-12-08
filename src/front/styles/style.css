@@ -15,7 +15,6 @@ a {
   background-blend-mode: color;
   text-align: center;
   font-size: 40px;
-
   color: whitesmoke;
   border-color: black;
   border-width: 4px;
@@ -26,60 +25,6 @@ a {
   display: flex;
   align-items: center;
   justify-content: center;
-}
-
-@keyframes bounce {
-  0% {
-    transform: translatey(-250px);
-  }
-  25% {
-    transform: translateY(65px);
-  }
-  50% {
-    transform: translateY(-100px);
-  }
-  75% {
-    transform: translateY(65px);
-  }
-  100% {
-    transform: translateY(0px);
-  }
-}
-
-.basketball-img {
-  position: relative;
-  width: 80px;
-  margin: 40px;
-  animation: bounce 3.5s ease-in-out;
-}
-
-@keyframes bounce2 {
-  0% {
-    transform: translatey(-250px);
-  }
-  25% {
-    transform: translateY(-250px);
-  }
-  50% {
-    transform: translateY(-250px);
-  }
-  62.5% {
-    transform: translateY(70px);
-  }
-  75% {
-    transform: translateY(-100px);
-  }
-  87.5% {
-    transform: translateY(70px);
-  }
-  100% {
-    transform: translateY(0px);
-  }
-}
-
-#title {
-  position: relative;
-  animation: bounce2 6s ease-in-out;
 }
 
 .bar {
@@ -165,7 +110,7 @@ a {
   flex-direction: column;
   width: 20%;
   background-color: lightgray;
-  height: 84vh;
+  height: 82vh;
   border-radius: 50px;
   overflow: scroll;
   align-items: center;
@@ -176,6 +121,21 @@ a {
 #history-header {
   position: sticky;
   top: 0;
+}
+
+.history-link {
+  border-style: none;
+  background-color: lightgray;
+  cursor: pointer;
+  color: orangered;
+  font-family: Optima, sans-serif;
+  font-size: medium;
+}
+
+.input-header {
+  margin-bottom: 10px;
+  color: orangered;
+  font-weight: bold;
 }
 
 #input-output {
@@ -190,8 +150,15 @@ a {
 #player-input {
   display: flex;
   flex-direction: row;
-  height: 50%;
+  height: 100px;
   align-items: center;
+  border: 2.5px;
+  border-style: solid;
+  border-color: orangered;
+  border-radius: 10px;
+  width: 70%;
+  justify-content: center;
+  margin-bottom: 20px;
 }
 
 #first-player-input {
@@ -222,5 +189,46 @@ a {
 }
 
 #player-output {
-  height: 50%;
+  height: 75%;
+  display: flex;
+  flex-direction: column;
+}
+#players {
+  height: 35%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+#player-one-output {
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#player-one-logo {
+  width: 175px;
+}
+
+#player-two-output {
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#player-two-logo {
+  width: 175px;
+}
+
+.player-name {
+  color: orangered;
+  font-size: large;
+}
+
+#results {
+  height: 60%;
+  overflow: scroll;
+  width: 1000px;
 }

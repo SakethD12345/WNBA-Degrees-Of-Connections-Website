@@ -5,13 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b1a4e374-76b6-4beb-a9ff-1639df75ceab" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/back/datasource/TicketingDatasource.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/back/datasource/Tickets.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/back/handler/TicketingHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/data/ticketing.json" afterDir="false" />
+
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/back/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/back/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/back/datasource/APIDatasource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/back/datasource/APIDatasource.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/back/datasource/Datasource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/back/datasource/Datasource.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/back/datasource/MockCensusDatasource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/back/datasource/MockCensusDatasource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/back/server/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/back/server/Server.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/back/test/TestAPIDatasource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/back/test/TestAPIDatasource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/front/components/PlayerOutput.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/front/components/PlayerOutput.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/front/components/ServerAccess.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/front/components/ServerAccess.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/front/styles/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/front/styles/style.css" afterDir="false" />
+
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,7 +77,7 @@
     "settings.editor.selected.configurable": "editor.preferences.completion",
     "vue.rearranger.settings.migration": "true"
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="Application.src.back.Main">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="wnba.backend.Main" />
@@ -118,17 +121,11 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="JetRunConfigurationType">
-      <module name="term-project-jlardner-Lcapozza-ssdhulip-lyangmac" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Application.src.back.Main" />
-        <item itemvalue="JUnit.TestAPIDatasource.testConnections" />
         <item itemvalue="Application.Main" />
+        <item itemvalue="JUnit.TestAPIDatasource.testConnections" />
       </list>
     </recent_temporary>
   </component>
@@ -144,7 +141,14 @@
       <workItem from="1701740386956" duration="11000" />
       <workItem from="1701740402149" duration="193000" />
       <workItem from="1701740661977" duration="66000" />
-      <workItem from="1701740822571" duration="25605000" />
+      <workItem from="1701740822571" duration="18137000" />
+      <workItem from="1701826493777" duration="4390000" />
+      <workItem from="1701979091276" duration="1132000" />
+      <workItem from="1702000327431" duration="1355000" />
+      <workItem from="1702001875004" duration="104000" />
+      <workItem from="1702001984225" duration="184000" />
+      <workItem from="1702002173648" duration="1609000" />
+
     </task>
     <servers />
   </component>

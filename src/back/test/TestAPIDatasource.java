@@ -3,6 +3,7 @@ package src.back.test;
 
 import org.junit.jupiter.api.Test;
 import src.back.datasource.APIDatasource;
+import src.back.exception.DatasourceException;
 import src.back.graph.Edge;
 
 import java.util.ArrayList;
@@ -12,7 +13,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 public class TestAPIDatasource {
 
     @Test
-    public void testConnections() {
+    public void testConnections() throws DatasourceException {
         APIDatasource datasource = new APIDatasource();
 //        ArrayList<Edge> connection = datasource.getConnection("Candace Parker", "Sue Bird");
 //        for (Edge edge: connection) {
