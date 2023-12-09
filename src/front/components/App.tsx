@@ -4,6 +4,48 @@ import { PlayerInput } from "./PlayerInput";
 import { PlayerOutput } from "./PlayerOutput";
 import { useState } from "react";
 
+document.addEventListener("keydown", function (event) {
+  //if command key or control key are held down
+  if (event.ctrlKey || event.metaKey) {
+    //using a switch here allows more controls to be added in the future
+    switch (event.key) {
+      case "i":
+        //focuses on the input box so user can type in
+        document.getElementById("input-box")!.focus();
+        event.preventDefault();
+        break;
+      case "u":
+        document.getElementById("abt-button")!.click();
+        event.preventDefault();
+        break;
+      case "j":
+        document.getElementById("history")!.focus();
+        event.preventDefault();
+        break;
+    }
+
+    //commands that are not combined with control/command
+  } else {
+    switch (event.key) {
+      //scrolls up whole page
+      case "ArrowUp":
+        window.scrollBy(0, -10);
+        break;
+
+      //scroll down whole page
+      case "ArrowDown":
+        window.scrollBy(0, 10);
+        break;
+
+      //presses submit when enter pressed
+      case "Enter":
+        document.getElementById("submit-button")!.click();
+        event.preventDefault();
+        break;
+    }
+  }
+});
+
 function App() {
   const [history, setHistory] = useState<string[]>([]);
   const [inputtedPlayers, setInputtedPlayers] = useState<string[]>([

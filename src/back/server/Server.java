@@ -29,7 +29,7 @@ public class Server {
      * This method constructs the server and instantiates the instance variables and the port number. It also makes all
      * the handlers which basically handle all the user stories and goals of the program
      */
-    public Server() {
+    public Server() throws DatasourceException {
         int port = 5555;
 
         Spark.port(port);

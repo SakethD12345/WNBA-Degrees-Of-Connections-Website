@@ -9,13 +9,13 @@ public final class Main {
      *
      * @param args An array of command line arguments
      */
-    public static void main(String[] args) {
+    public static void main(String[] args) throws DatasourceException {
         new Main(args).run();
     }
 
     private Main(String[] args) {}
 
-    private void run() {
+    private void run() throws DatasourceException {
         new Server();
         System.out.println("Server started; exiting main...");
     }

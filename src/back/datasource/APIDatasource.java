@@ -25,11 +25,9 @@ public class APIDatasource implements Datasource {
     /**
      * The constructor builds the cache and defines its properties
      */
-    public APIDatasource() {
+    public APIDatasource() throws DatasourceException {
         this.nameToNode = new HashMap<>();
         this.generateGraph();
-
-
     }
 
 
