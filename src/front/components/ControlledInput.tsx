@@ -10,7 +10,6 @@ interface ControlledInputProps {
   ariaLabel: string;
 }
 
-const players = getAllPlayers();
 
 export function ControlledInput({
   value,
