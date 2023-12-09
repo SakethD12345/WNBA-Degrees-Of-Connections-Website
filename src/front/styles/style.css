@@ -261,4 +261,6 @@ a {
   font-size: 12px;
   max-height: 40px;
   outline: 1pt;
+  overflow: scroll;
+  cursor: pointer;
 }

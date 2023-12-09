@@ -10,7 +10,6 @@ interface ControlledInputProps {
   ariaLabel: string;
 }
 
-
 export function ControlledInput({
   value,
   setValue,
@@ -32,7 +31,7 @@ export function ControlledInput({
     const filtered = players.filter((player) =>
       player.toLowerCase().includes(inputValue.toLowerCase())
     );
-    const limitedFilteredPlayers = filtered.slice(0, 3);
+    const limitedFilteredPlayers = filtered.slice(0, 20);
     setFilteredPlayers(limitedFilteredPlayers);
     setValue(inputValue);
   };
