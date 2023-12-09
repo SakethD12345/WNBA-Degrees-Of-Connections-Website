@@ -18,7 +18,6 @@ interface ServerAccessProps {
 export async function makeConnection(
   PlayerOne: string,
   PlayerTwo: string,
-  isValidCall: boolean,
   count: number,
   props: ServerAccessProps
 ) {
@@ -53,11 +52,32 @@ export async function makeConnection(
         for (let i = 0; i < json.count; i++) {
           connections[i] = [];
           let tempJson = json[i + 1];
-          connections[i][0] = tempJson["Player 1"];
-          connections[i][1] = tempJson["Player 2"];
-          connections[i][1] = tempJson["Team"];
+          if (i === 0) {
+            if (tempJson["Player 1"] === PlayerOne) {
+              connections[i][0] = tempJson["Player 1"];
+              connections[i][1] = tempJson["Player 2"];
+            } else {
+              connections[i][1] = tempJson["Player 1"];
+              connections[i][0] = tempJson["Player 2"];
+            }
+          } else {
+            if (tempJson["Player 1"] === connections[i - 1][1]) {
+              connections[i][0] = tempJson["Player 1"];
+              connections[i][1] = tempJson["Player 2"];
+            } else {
+              connections[i][1] = tempJson["Player 1"];
+              connections[i][0] = tempJson["Player 2"];
+            }
+          }
+          connections[i][2] = tempJson["Team"];
+          connections[i][3] = tempJson["Season"];
+          connections[i][4] = i.toString();
+          let tempString: string = tempJson["Team"];
+          let tempStringArr = tempString.toLowerCase().split(" ");
+          tempString = tempStringArr[0] + "-" + tempStringArr[1];
+          connections[i][5] = tempString;
         }
-        console.log(connections);
+        console.log(connections[0][5]);
         props.setConnectingPlayers(connections);
       }
     });

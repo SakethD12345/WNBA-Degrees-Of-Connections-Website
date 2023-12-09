@@ -28,13 +28,7 @@ export function PlayerInput(props: PlayerInputProps) {
   let count: number = -1;
 
   function handleSubmit() {
-    makeConnection(
-      props.inputString1,
-      props.inputString2,
-      isValidCall,
-      count,
-      props
-    );
+    makeConnection(props.inputString1, props.inputString2, count, props);
 
     props.setInputString1("");
     props.setInputString2("");

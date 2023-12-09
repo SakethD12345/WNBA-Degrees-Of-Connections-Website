@@ -30,7 +30,9 @@ export function PlayerOutput(props: PlayerOutputProps) {
       </div>
       <div id="results">
         {props.connectingPlayers.map((row: string[]) => (
-          <div className="connecting-player-div"></div>
+          <div className="connecting-player-div" id={row[5]}>
+            {row[0]} played with {row[1]} on the {row[2]} in {row[3]}
+          </div>
         ))}
       </div>
     </div>
