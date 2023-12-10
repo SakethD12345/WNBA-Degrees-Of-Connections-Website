@@ -1,5 +1,6 @@
 import "../styles/style.css";
 import { Dispatch, SetStateAction, useState } from "react";
+import { teamColors } from "../../data/colors";
 
 interface PlayerOutputProps {
   inputtedPlayers: string[];
@@ -30,7 +31,11 @@ export function PlayerOutput(props: PlayerOutputProps) {
       </div>
       <div id="results">
         {props.connectingPlayers.map((row: string[]) => (
-          <div className="connecting-player-div" id={row[5]}>
+          <div
+            className="connecting-player-div"
+            id={row[5]}
+            style={{ backgroundColor: teamColors.get(row[2]) }}
+          >
             {row[0]} played with {row[1]} on the {row[2]} in {row[3]}
           </div>
         ))}

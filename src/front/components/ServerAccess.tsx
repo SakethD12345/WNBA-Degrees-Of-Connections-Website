@@ -77,14 +77,12 @@ export async function makeConnection(
           tempString = tempStringArr[0] + "-" + tempStringArr[1];
           connections[i][5] = tempString;
         }
-        console.log(connections[0][5]);
         props.setConnectingPlayers(connections);
       }
     });
 }
 
-
-export async function getAllPlayers(){
+export async function getAllPlayers() {
   const response = await fetch("http://localhost:5555/dataset");
   const json = await response.json();
   const players: string[] = json.players;

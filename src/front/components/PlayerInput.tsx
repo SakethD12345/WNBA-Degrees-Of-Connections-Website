@@ -29,9 +29,6 @@ export function PlayerInput(props: PlayerInputProps) {
 
   function handleSubmit() {
     makeConnection(props.inputString1, props.inputString2, count, props);
-
-    props.setInputString1("");
-    props.setInputString2("");
   }
 
   return (

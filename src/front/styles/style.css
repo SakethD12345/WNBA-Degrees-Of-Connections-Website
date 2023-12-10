@@ -36,6 +36,8 @@ a {
   padding: 0;
   justify-content: space-between;
   position: fixed;
+  background-color: rgb(240, 239, 239);
+  z-index: 1;
 }
 #wnba-logo {
   width: 150px;
@@ -99,7 +101,7 @@ a {
 #app {
   display: flex;
   width: 100%;
-  align-items: center;
+  align-items: start;
   justify-content: bottom;
   background-color: white;
   height: 89.4vh;
@@ -109,9 +111,9 @@ a {
   display: flex;
   flex-direction: column;
   width: 20%;
-  background-color: lightgray;
-  height: 82vh;
-  border-radius: 50px;
+  background-color: rgb(240, 239, 239);
+  height: auto;
+  border-radius: 10px;
   overflow: scroll;
   align-items: center;
   color: orangered;
@@ -125,11 +127,13 @@ a {
 
 .history-link {
   border-style: none;
-  background-color: lightgray;
+  background-color: rgb(240, 239, 239);
   cursor: pointer;
   color: orangered;
   font-family: Optima, sans-serif;
   font-size: medium;
+  margin: 10px;
+  text-align: left;
 }
 
 .input-header {
@@ -162,12 +166,10 @@ a {
 }
 
 #first-player-input {
-  align-self: flex-start;
   margin: 10px 50px;
 }
 
 #second-player-input {
-  align-self: flex-start;
   margin: 10px 50px;
 }
 
@@ -239,12 +241,13 @@ a {
 }
 
 .connecting-player-div {
-  height: 100px;
+  height: auto;
   width: 500px;
   padding: 10px;
   margin: 10px;
   border-style: solid;
   border-radius: 10px;
+  color: lightgray;
 }
 
 #popup {
@@ -263,4 +266,15 @@ a {
   outline: 1pt;
   overflow: scroll;
   cursor: pointer;
+}
+
+#bottom-bar {
+  height: 100px;
+  width: 100%;
+  position: relative;
+  bottom: 0;
+  background-color: orangered;
+  justify-content: center;
+  color: white;
+  font-size: larger;
 }
