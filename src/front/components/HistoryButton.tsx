@@ -16,6 +16,7 @@ export function HistoryButton(props: HistoryButtonProps) {
   inputtedPlayers[0] = tempPlayers[0].split("").toString().replaceAll(",", "");
   inputtedPlayers[1] = tempPlayers[1].slice(0);
 
+  // on click this function will fill the input boxes with the player names of when this button was created
   function handleSubmit(command: string) {
     let p1: string = "";
     let p2: string = "";
@@ -26,7 +27,6 @@ export function HistoryButton(props: HistoryButtonProps) {
     p2 = tempArray[0];
     props.setInput1(p1);
     props.setInput2(p2);
-    console.log(p1 + " " + p2);
   }
   return (
     <button

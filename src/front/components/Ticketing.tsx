@@ -11,10 +11,12 @@ interface TicketButtonProps {
   setTicket2: Dispatch<SetStateAction<string>>;
 }
 
+// custom component to set links to go to the website of the team that the players played on in that connection
 export function Ticketing(props: TicketButtonProps) {
   const [link1, setLink1] = useState<string>("");
   const [link2, setLink2] = useState<string>("");
 
+  // useEffect to rerender whenever team1 or team2 is updated
   useEffect(() => {
     const fetchLinks = async () => {
       if (props.team1 !== "") {
@@ -28,6 +30,8 @@ export function Ticketing(props: TicketButtonProps) {
 
     fetchLinks();
   }, [props.team1, props.team2]);
+
+  // useMemo for ticket1 to make sure that the page is only rerendered when absolutely necessary
   const ticket1Message = useMemo(() => {
     if (link1 === "Team no longer exists.") {
       return "The " + props.team1 + " no longer exists!";
@@ -38,6 +42,7 @@ export function Ticketing(props: TicketButtonProps) {
     }
   }, [link1, props.team1]);
 
+  // useMemo for ticket2 to make sure that the page is only rerendered when absolutely necessary
   const ticket2Message = useMemo(() => {
     if (link2 === "Team no longer exists.") {
       return "The " + props.team2 + " no longer exists!";
@@ -48,6 +53,7 @@ export function Ticketing(props: TicketButtonProps) {
     }
   }, [link2, props.team2]);
 
+  // returns two links, to the ticket site if applicable, to the wnba home if not
   return (
     <div id="ticketing">
       <div id="team1-tickets">

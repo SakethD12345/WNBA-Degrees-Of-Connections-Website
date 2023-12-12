@@ -10,6 +10,7 @@ interface ControlledInputProps {
   ariaLabel: string;
 }
 
+// input area for strings
 export function ControlledInput({
   value,
   setValue,

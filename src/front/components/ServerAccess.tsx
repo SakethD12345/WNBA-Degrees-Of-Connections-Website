@@ -15,6 +15,7 @@ interface ServerAccessProps {
   setCurrentTeam2: Dispatch<SetStateAction<string>>;
 }
 
+// makes the connectin between the two players and gets the count of connections
 export async function makeConnection(
   PlayerOne: string,
   PlayerTwo: string,
@@ -48,8 +49,13 @@ export async function makeConnection(
           ...props.history,
         ]);
 
+        // assigns the number of connections between the players to the inputted variable
         count = json.count;
         let connections: string[][] = [];
+
+        // makes sure that the order of the connections is formatted correctly
+        // ex: the connection outputted will start with the first player and end with the second player,
+        // while making sure that it is easy to follow who is connected to who and how
         for (let i = 0; i < json.count; i++) {
           connections[i] = [];
           let tempJson = json[i + 1];
@@ -70,6 +76,8 @@ export async function makeConnection(
               connections[i][0] = tempJson["Player 2"];
             }
           }
+
+          // assign the rest of the variables to their respective place
           connections[i][2] = tempJson["Team"];
           connections[i][3] = tempJson["Season"];
           connections[i][4] = i.toString();
@@ -78,8 +86,7 @@ export async function makeConnection(
           tempString = tempStringArr[0] + "-" + tempStringArr[1];
           connections[i][5] = tempString;
         }
-        console.log(connections[0][2]);
-        console.log(connections[json.count - 1][2]);
+        // assign the right variables to the useStates for use in re-rendering components correctly
         props.setCurrentTeam1(connections[0][2]);
         props.setCurrentTeam2(connections[json.count - 1][2]);
         props.setConnectingPlayers(connections);
@@ -87,13 +94,14 @@ export async function makeConnection(
     });
 }
 
+// accesses the backend for a list of players to make the auto-suggest dropdown work
 export async function getAllPlayers() {
   const response = await fetch("http://localhost:5555/dataset");
   const json = await response.json();
   const players: string[] = json.players;
   return players;
 }
-
+// access the backend to find a team's website where they sell tickets
 export async function getTicketingLink(team: string) {
   let link: string = "err";
   team.replace(" ", "%20");

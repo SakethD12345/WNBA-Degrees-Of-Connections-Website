@@ -23,13 +23,15 @@ interface PlayerInputProps {
   setCurrentTeam2: Dispatch<SetStateAction<string>>;
 }
 
+// section for where the user can input and submit the players to the backend to be processed
 export function PlayerInput(props: PlayerInputProps) {
   let count: number = -1;
 
+  // accesses the backend server to find out the connection between the two players
   function handleSubmit() {
     makeConnection(props.inputString1, props.inputString2, count, props);
   }
-
+  // returns two string inputs for the two different players
   return (
     <div id="player-input">
       <div id="first-player-input">
