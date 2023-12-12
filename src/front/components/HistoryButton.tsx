@@ -9,6 +9,7 @@ interface HistoryButtonProps {
   command: string;
 }
 
+// special component for a button that stores the values of the players at the time when the button was first created
 export function HistoryButton(props: HistoryButtonProps) {
   const tempPlayers: string[] = [props.PlayerOne, props.PlayerTwo];
   const inputtedPlayers: string[] = [];

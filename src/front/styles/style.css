@@ -46,6 +46,7 @@ a {
 #wnba-logo-text {
   color: orangered;
   margin-left: -50px;
+  font-size: x-large;
 }
 #corner-logo {
   display: flex;
@@ -113,6 +114,7 @@ a {
   width: 20%;
   background-color: rgb(240, 239, 239);
   height: auto;
+  max-height: 81.5vh;
   border-radius: 10px;
   overflow: scroll;
   align-items: center;
@@ -126,8 +128,10 @@ a {
 }
 
 .history-link {
-  border-style: none;
-  background-color: rgb(240, 239, 239);
+  border-style: solid;
+  border-radius: 10px;
+  border-color: orangered;
+  background-color: rgb(216, 214, 214);
   cursor: pointer;
   color: orangered;
   font-family: Optima, sans-serif;
@@ -198,7 +202,7 @@ a {
   flex-direction: column;
 }
 #players {
-  height: 35%;
+  height: auto;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -277,4 +281,10 @@ a {
   justify-content: center;
   color: white;
   font-size: larger;
+}
+
+#ticketing {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
 }

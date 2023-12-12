@@ -19,12 +19,11 @@ interface PlayerInputProps {
   connectingPlayers: string[][];
   setConnectingPlayers: Dispatch<SetStateAction<string[][]>>;
 
-  setPlayer1Logo: Dispatch<SetStateAction<string>>;
-  setPlayer2Logo: Dispatch<SetStateAction<string>>;
+  setCurrentTeam1: Dispatch<SetStateAction<string>>;
+  setCurrentTeam2: Dispatch<SetStateAction<string>>;
 }
 
 export function PlayerInput(props: PlayerInputProps) {
-  let isValidCall: boolean = false;
   let count: number = -1;
 
   function handleSubmit() {

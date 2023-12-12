@@ -11,8 +11,8 @@ interface ServerAccessProps {
   connectingPlayers: string[][];
   setConnectingPlayers: Dispatch<SetStateAction<string[][]>>;
 
-  setPlayer1Logo: Dispatch<SetStateAction<string>>;
-  setPlayer2Logo: Dispatch<SetStateAction<string>>;
+  setCurrentTeam1: Dispatch<SetStateAction<string>>;
+  setCurrentTeam2: Dispatch<SetStateAction<string>>;
 }
 
 export async function makeConnection(
@@ -47,6 +47,7 @@ export async function makeConnection(
             json.count,
           ...props.history,
         ]);
+
         count = json.count;
         let connections: string[][] = [];
         for (let i = 0; i < json.count; i++) {
@@ -77,6 +78,10 @@ export async function makeConnection(
           tempString = tempStringArr[0] + "-" + tempStringArr[1];
           connections[i][5] = tempString;
         }
+        console.log(connections[0][2]);
+        console.log(connections[json.count - 1][2]);
+        props.setCurrentTeam1(connections[0][2]);
+        props.setCurrentTeam2(connections[json.count - 1][2]);
         props.setConnectingPlayers(connections);
       }
     });
@@ -87,4 +92,20 @@ export async function getAllPlayers() {
   const json = await response.json();
   const players: string[] = json.players;
   return players;
+}
+
+export async function getTicketingLink(team: string) {
+  let link: string = "err";
+  team.replace(" ", "%20");
+  await fetch("http://localhost:5555/ticketing?team=" + team)
+    .then((response) => response.json())
+    .then((json) => {
+      if (json.result === "error") {
+        link = json.error;
+      } else {
+        link = json.ticketing;
+      }
+    });
+
+  return link;
 }
