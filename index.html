@@ -31,12 +31,15 @@
       </div>
     </div>
     <div id="root"></div>
+    <div class="bar" id="bottom-bar">Made for Brown University CSCI 0320</div>
     <script type="module" src="/src/front/components/main.tsx"></script>
     <script>
-      document.getElementById('abt-button').addEventListener('click', function() {
-        var popup = document.getElementById('popup');
-        popup.open = !popup.open;
-      });
+      document
+        .getElementById("abt-button")
+        .addEventListener("click", function () {
+          var popup = document.getElementById("popup");
+          popup.open = !popup.open;
+        });
     </script>
   </body>
 </html>

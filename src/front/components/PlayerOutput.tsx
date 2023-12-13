@@ -1,5 +1,7 @@
 import "../styles/style.css";
 import { Dispatch, SetStateAction, useState } from "react";
+import { teamColors } from "../../data/colors";
+import { Ticketing } from "./Ticketing";
 
 interface PlayerOutputProps {
   inputtedPlayers: string[];
@@ -8,29 +10,44 @@ interface PlayerOutputProps {
   connectingPlayers: string[][];
   setConnectingPlayers: Dispatch<SetStateAction<string[][]>>;
 
-  player1Logo: string;
-  setPlayer1Logo: Dispatch<SetStateAction<string>>;
+  currentTeam1: string;
+  currentTeam2: string;
 
-  player2Logo: string;
-  setPlayer2Logo: Dispatch<SetStateAction<string>>;
+  ticket1: string;
+  ticket2: string;
+  setTicket1: Dispatch<SetStateAction<string>>;
+  setTicket2: Dispatch<SetStateAction<string>>;
 }
 
+// section for where the output of the search is displayed to the user
 export function PlayerOutput(props: PlayerOutputProps) {
+  // returns component that gives the user links to sites to buy tickets and returns the section where the results are displayed to the user
   return (
     <div id="player-output">
+      <Ticketing
+        team1={props.currentTeam1}
+        team2={props.currentTeam2}
+        ticket1={props.ticket1}
+        ticket2={props.ticket2}
+        setTicket1={props.setTicket1}
+        setTicket2={props.setTicket2}
+      />
       <div id="players">
         <div id="player-one-output">
-          <img id="player-one-logo" src={props.player1Logo} />
           <p className="player-name">{props.inputtedPlayers[0]}</p>
         </div>
         <div id="player-two-output">
-          <img id="player-two-logo" src={props.player2Logo} />
           <p className="player-name">{props.inputtedPlayers[1]}</p>
         </div>
       </div>
       <div id="results">
-        {props.connectingPlayers.map((row: string[]) => (
-          <div className="connecting-player-div" id={row[5]}>
+        {props.connectingPlayers.map((row: string[], index) => (
+          <div
+            key={index}
+            className="connecting-player-div"
+            id={row[5]}
+            style={{ backgroundColor: teamColors.get(row[2]) }}
+          >
             {row[0]} played with {row[1]} on the {row[2]} in {row[3]}
           </div>
         ))}

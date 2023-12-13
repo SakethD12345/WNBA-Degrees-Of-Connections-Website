@@ -47,23 +47,36 @@ document.addEventListener("keydown", function (event) {
 });
 
 function App() {
+  // useState for setting the history box
   const [history, setHistory] = useState<string[]>([]);
+
+  // useState for a pair of players inputted
   const [inputtedPlayers, setInputtedPlayers] = useState<string[]>([
     "Player One",
     "Player Two",
   ]);
-  const [connectingPlayers, setConnectingPlayers] = useState<string[][]>([]);
-  const [player1Logo, setPlayer1Logo] = useState<string>(
-    "https://static.vecteezy.com/system/resources/previews/012/996/778/non_2x/sport-ball-basketball-line-art-free-png.png"
-  );
-  const [player2Logo, setPlayer2Logo] = useState<string>(
-    "https://static.vecteezy.com/system/resources/previews/012/996/778/non_2x/sport-ball-basketball-line-art-free-png.png"
-  );
 
+  // useState for the connections between the inputted players
+  const [connectingPlayers, setConnectingPlayers] = useState<string[][]>([]);
+
+  // useStates for the strings that go into the input boxes 1 and 2 respectively
   const [inputString1, setInputString1] = useState<string>("");
   const [inputString2, setInputString2] = useState<string>("");
 
+  // useStatesfor the team of players 1 and 2 respectively
+  const [currentTeam1, setCurrentTeam1] = useState<string>("");
+  const [currentTeam2, setCurrentTeam2] = useState<string>("");
+
+  // useStates for the message used to display the ticketting link
+  const [ticket1, setTicket1] = useState<string>(
+    "Enter two players to get their teammate connections!"
+  );
+  const [ticket2, setTicket2] = useState<string>(
+    "Enter two players to get their teammate connections!"
+  );
+
   return (
+    // divided App into 3 parts, the history, the input, and the output
     <div className="App" id="app">
       <History
         history={history}
@@ -82,20 +95,22 @@ function App() {
           setHistory={setHistory}
           inputtedPlayers={inputtedPlayers}
           setInputtedPlayers={setInputtedPlayers}
-          setPlayer1Logo={setPlayer1Logo}
-          setPlayer2Logo={setPlayer2Logo}
           connectingPlayers={connectingPlayers}
           setConnectingPlayers={setConnectingPlayers}
+          setCurrentTeam1={setCurrentTeam1}
+          setCurrentTeam2={setCurrentTeam2}
         />
         <PlayerOutput
           inputtedPlayers={inputtedPlayers}
           setInputtedPlayers={setInputtedPlayers}
-          player1Logo={player1Logo}
-          setPlayer1Logo={setPlayer1Logo}
-          player2Logo={player2Logo}
-          setPlayer2Logo={setPlayer2Logo}
           connectingPlayers={connectingPlayers}
           setConnectingPlayers={setConnectingPlayers}
+          currentTeam1={currentTeam1}
+          currentTeam2={currentTeam2}
+          ticket1={ticket1}
+          ticket2={ticket2}
+          setTicket1={setTicket1}
+          setTicket2={setTicket2}
         />
       </div>
     </div>

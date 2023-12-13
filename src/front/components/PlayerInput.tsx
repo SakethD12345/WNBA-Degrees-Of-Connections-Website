@@ -19,21 +19,19 @@ interface PlayerInputProps {
   connectingPlayers: string[][];
   setConnectingPlayers: Dispatch<SetStateAction<string[][]>>;
 
-  setPlayer1Logo: Dispatch<SetStateAction<string>>;
-  setPlayer2Logo: Dispatch<SetStateAction<string>>;
+  setCurrentTeam1: Dispatch<SetStateAction<string>>;
+  setCurrentTeam2: Dispatch<SetStateAction<string>>;
 }
 
+// section for where the user can input and submit the players to the backend to be processed
 export function PlayerInput(props: PlayerInputProps) {
-  let isValidCall: boolean = false;
   let count: number = -1;
 
+  // accesses the backend server to find out the connection between the two players
   function handleSubmit() {
     makeConnection(props.inputString1, props.inputString2, count, props);
-
-    props.setInputString1("");
-    props.setInputString2("");
   }
-
+  // returns two string inputs for the two different players
   return (
     <div id="player-input">
       <div id="first-player-input">

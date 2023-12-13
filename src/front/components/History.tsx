@@ -1,5 +1,6 @@
 import { Dispatch, SetStateAction, useState } from "react";
 import "../styles/style.css";
+import { HistoryButton } from "./HistoryButton";
 
 interface HistoryProps {
   history: string[];
@@ -10,24 +11,22 @@ interface HistoryProps {
   inputString2: string;
   setInputString2: Dispatch<SetStateAction<string>>;
 }
-//This function builds the history
+//This function builds the history with special components for each entry
 export function History(props: HistoryProps) {
-  const [searches, setSearches] = useState<string[][]>([]);
-  function handleSubmit() {}
+  // we map over each entry in the history useState to create a custom button componenet
   return (
     <div aria-label="History" id="history" className="history" title="history">
       <h2 id="history-header">Search History</h2>
-      {}
-      {props.history.map((command) => (
-        <button
-          className="history-link"
-          title="history-line"
-          aria-label={command}
-          tabIndex={0}
-          onClick={() => handleSubmit()}
-        >
-          {command}
-        </button>
+
+      {props.history.map((command, index) => (
+        <HistoryButton
+          key={index}
+          PlayerOne={props.inputString1}
+          setInput1={props.setInputString1}
+          setInput2={props.setInputString2}
+          PlayerTwo={props.inputString2}
+          command={command}
+        />
       ))}
     </div>
   );
