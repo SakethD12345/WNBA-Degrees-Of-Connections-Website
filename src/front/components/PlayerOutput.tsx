@@ -47,6 +47,7 @@ export function PlayerOutput(props: PlayerOutputProps) {
             className="connecting-player-div"
             id={row[5]}
             style={{ backgroundColor: teamColors.get(row[2]) }}
+            tabIndex={0}
           >
             {row[0]} played with {row[1]} on the {row[2]} in {row[3]}
           </div>
