@@ -16,9 +16,12 @@ export function ControlledInput({
   setValue,
   ariaLabel,
 }: ControlledInputProps) {
+  //set state for filtered players
   const [filteredPlayers, setFilteredPlayers] = useState<string[]>([]);
   const [players, setPlayers] = useState<string[]>([]);
 
+
+  //fetches the list of all players from the backend
   useEffect(() => {
     const fetchData = async () => {
       const result: string[] = await getAllPlayers();
@@ -28,11 +31,16 @@ export function ControlledInput({
     fetchData();
   }, []);
 
+  //UseEffect that handles input change
   const handleInputChange = (inputValue: string) => {
+    //filters player names down to only values with the given input
     const filtered = players.filter((player) =>
       player.toLowerCase().includes(inputValue.toLowerCase())
     );
+    //cut list off at 20 players
     const limitedFilteredPlayers = filtered.slice(0, 20);
+
+    //set the filtered players for the dropdown and save inputted information
     setFilteredPlayers(limitedFilteredPlayers);
     setValue(inputValue);
   };

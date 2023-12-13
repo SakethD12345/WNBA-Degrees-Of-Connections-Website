@@ -5,9 +5,7 @@ import src.back.graph.Edge;
 
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Set;
-import java.util.stream.Stream;
 
 /**
  * This is the interface that defines a Datasource and allows for mocking

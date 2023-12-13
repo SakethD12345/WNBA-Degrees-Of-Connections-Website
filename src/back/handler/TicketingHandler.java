@@ -8,29 +8,31 @@ import spark.Response;
 import spark.Route;
 import src.back.datasource.Datasource;
 import src.back.exception.DatasourceException;
-import src.back.graph.Edge;
 
 import java.lang.reflect.Type;
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
-import java.util.stream.Stream;
 
+/**
+ * This is the TicketingHandler class. It implements the route method. It is responsible
+ * for defining the endpoint where ticketing information is grabbed on the front end.
+ */
 public class TicketingHandler implements Route {
     private Datasource datasource;
 
     /**
-     * The constructor builds a broadband handler with a cache and the datasource
-     * @param datasource is the data source
+     * Constructor takes in datasource object as parameter
      */
     public TicketingHandler(Datasource datasource) {
         this.datasource = datasource;
     }
+
     /**
-     * This method gets the state and county names and gets the broadband percentage
-     * @param request is the request
-     * @param response is the response
-     * @return a 2D JSon Array
+     * This is the handle method. It is defined from the Route interface. Takes in a request
+     * for information and returns a JSON with the necessary information.
+     * @param request requested information
+     * @param response n/a for this application
+     * @return JSON object with ticketing information based on the team
      */
     public Object handle(Request request, Response response) {
         Moshi moshi = new Moshi.Builder().build();

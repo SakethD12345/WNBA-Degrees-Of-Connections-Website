@@ -7,30 +7,34 @@ import spark.Request;
 import spark.Response;
 import spark.Route;
 import src.back.datasource.Datasource;
-import src.back.exception.DatasourceException;
-import src.back.graph.Edge;
 
 import java.lang.reflect.Type;
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
-import java.util.stream.Stream;
 
+/**
+ * This is the DatasetHandler class. It is the necessary handler class that is used when
+ * accessing the large list of players in the league.
+ */
 public class DatasetHandler implements Route {
     private Datasource datasource;
 
     /**
-     * The constructor builds a broadband handler with a cache and the datasource
-     * @param datasource is the data source
+     * Constructor takes in the datasource object
+     *
+     * @param datasource datasource object
      */
     public DatasetHandler(Datasource datasource) {
         this.datasource = datasource;
     }
+
     /**
-     * This method gets the state and county names and gets the broadband percentage
-     * @param request is the request
-     * @param response is the response
-     * @return a 2D JSon Array
+     * This is the handle method. It is defined from the route interface. It takes in the
+     * necessary parameters and produces a json as a response.
+     *
+     * @param request requested information
+     * @param response n/a for this application
+     * @return JSON with all players
      */
     public Object handle(Request request, Response response) {
         Moshi moshi = new Moshi.Builder().build();
