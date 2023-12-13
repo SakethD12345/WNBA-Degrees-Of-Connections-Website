@@ -3,41 +3,41 @@ package src.back.handler;
 import com.squareup.moshi.JsonAdapter;
 import com.squareup.moshi.Moshi;
 import com.squareup.moshi.Types;
-import src.back.datasource.Datasource;
-import src.back.exception.DatasourceException;
 import spark.Request;
 import spark.Response;
 import spark.Route;
-
-import java.io.IOException;
-import java.lang.reflect.Type;
-
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-
-import com.google.common.cache.Cache;
+import src.back.datasource.Datasource;
+import src.back.exception.DatasourceException;
 import src.back.graph.Edge;
 
+import java.lang.reflect.Type;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
+
 /**
- * This class deals with getting the broadband percentage
+ * This the ConnectionHandler class. It is the broadest backend access point that
+ * takes in two players names and returns a JSON that represents the connections
+ * between them.
  */
 public class ConnectionHandler implements Route {
     private Datasource datasource;
 
     /**
-     * The constructor builds a broadband handler with a cache and the datasource
-     * @param datasource is the data source
+     * Constructor takes in the datasource as a parameter
+     * @param datasource datasource we are accessing
      */
     public ConnectionHandler(Datasource datasource) {
         this.datasource = datasource;
     }
+
     /**
-     * This method gets the state and county names and gets the broadband percentage
-     * @param request is the request
-     * @param response is the response
-     * @return a 2D JSon Array
+     * This is the handle method. It is the method necessary for the Route interface.
+     * It handles a given request and returns that information.
+     *
+     * @param request requested information
+     * @param response n/a for this application
+     * @return json with necessary information
      */
     public Object handle(Request request, Response response) {
         Moshi moshi = new Moshi.Builder().build();

@@ -11,7 +11,8 @@ interface TicketButtonProps {
   setTicket2: Dispatch<SetStateAction<string>>;
 }
 
-// custom component to set links to go to the website of the team that the players played on in that connection
+// custom component to set links to go to the website of the team that the players played on in
+// that connection
 export function Ticketing(props: TicketButtonProps) {
   const [link1, setLink1] = useState<string>("");
   const [link2, setLink2] = useState<string>("");

@@ -6,7 +6,6 @@ import src.back.graph.Edge;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Set;
-import java.util.stream.Stream;
 
 /**
  * This is the MockCensusDatasource class. It is used in testing and does not access

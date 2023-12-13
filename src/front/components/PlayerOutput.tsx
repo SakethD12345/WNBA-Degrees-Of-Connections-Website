@@ -21,7 +21,8 @@ interface PlayerOutputProps {
 
 // section for where the output of the search is displayed to the user
 export function PlayerOutput(props: PlayerOutputProps) {
-  // returns component that gives the user links to sites to buy tickets and returns the section where the results are displayed to the user
+  // returns component that gives the user links to sites to buy tickets and returns the section 
+  //where the results are displayed to the user
   return (
     <div id="player-output">
       <Ticketing
