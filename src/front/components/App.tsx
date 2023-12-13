@@ -18,8 +18,8 @@ document.addEventListener("keydown", function (event) {
         document.getElementById("abt-button")!.click();
         event.preventDefault();
         break;
-      case "j":
-        document.getElementById("history")!.focus();
+      case "Enter":
+        document.getElementById("submit-button")!.click();
         event.preventDefault();
         break;
     }
@@ -35,12 +35,6 @@ document.addEventListener("keydown", function (event) {
       //scroll down whole page
       case "ArrowDown":
         window.scrollBy(0, 10);
-        break;
-
-      //presses submit when enter pressed
-      case "Enter":
-        document.getElementById("submit-button")!.click();
-        event.preventDefault();
         break;
     }
   }

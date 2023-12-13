@@ -235,7 +235,7 @@ a {
   margin: 10px;
   border-style: solid;
   border-radius: 10px;
-  color: lightgray;
+  color: rgb(211, 211, 211);
 }
 
 #popup {
