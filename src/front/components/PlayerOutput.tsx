@@ -24,7 +24,7 @@ export function PlayerOutput(props: PlayerOutputProps) {
   // returns component that gives the user links to sites to buy tickets and returns the section 
   //where the results are displayed to the user
   return (
-    <div id="player-output">
+    <div aria-label="player-output" id="player-output">
       <Ticketing
         team1={props.currentTeam1}
         team2={props.currentTeam2}
