@@ -33,7 +33,7 @@ export function PlayerInput(props: PlayerInputProps) {
   }
   // returns two string inputs for the two different players
   return (
-    <div id="player-input">
+    <div aria-label="player-input" id="player-input">
       <div id="first-player-input">
         <legend className="input-header">Enter first player:</legend>
         <ControlledInput
